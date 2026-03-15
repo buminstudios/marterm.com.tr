@@ -12,8 +12,8 @@
     <meta property="og:url" content="https://marterm.com.tr/pages/galeri.html">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="../logolar/marterm_icon.png">
-    <link rel="apple-touch-icon" href="../logolar/marterm_icon.png">
+    <link rel="icon" type="image/png" href="../assets/logolar/marterm_icon.png">
+    <link rel="apple-touch-icon" href="../assets/logolar/marterm_icon.png">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,15 +28,17 @@
     <header id="main-header" class="header">
         <div class="header__inner">
             <a href="/" class="header__logo" id="logo-link">
-                <img src="../logolar/marterm_logo_beyaz.png" alt="Marterm Logo" class="header__logo-img">
+                <img src="../assets/logolar/marterm_logo_beyaz.png" alt="Marterm Logo" class="header__logo-img">
             </a>
 
             <nav class="header__nav" id="main-nav">
-                <a href="/" class="header__nav-link" id="nav-home">Anasayfa</a>
-                <a href="/pages/urunler.html" class="header__nav-link" id="nav-products">Ürünler</a>
-                <a href="/pages/hakkimizda.html" class="header__nav-link" id="nav-about">Hakkımızda</a>
-                <a href="/pages/galeri.html" class="header__nav-link active" id="nav-gallery">Galeri</a>
-                <a href="/pages/katalog.html" class="header__nav-link" id="nav-catalog">Katalog</a>
+                <div class="header__nav-group">
+                    <a href="/" class="header__nav-link" id="nav-home">Anasayfa</a>
+                    <a href="/pages/urunler.html" class="header__nav-link" id="nav-products">Ürünler</a>
+                    <a href="/pages/hakkimizda.html" class="header__nav-link" id="nav-about">Hakkımızda</a>
+                    <a href="/pages/galeri.html" class="header__nav-link active" id="nav-gallery">Galeri</a>
+                    <a href="/pages/katalog.html" class="header__nav-link" id="nav-catalog">Katalog</a>
+                </div>
                 <a href="/pages/iletisim.html" class="header__nav-link header__nav-link--cta" id="nav-contact">İletişim</a>
             </nav>
 
@@ -94,7 +96,7 @@
             <div class="gallery-grid" id="gallery-grid">
                 <!-- Ürün Görselleri -->
                 <div class="gallery-item gallery-item--tall reveal-up" data-category="urun" id="gallery-1">
-                    <img src="../heros/hero 1.jpeg" alt="Marterm doğal yalıtım keçesi yakın çekim" loading="lazy">
+                    <img src="../assets/heros/hero 1.jpeg" alt="Marterm doğal yalıtım keçesi yakın çekim" loading="lazy">
                     <div class="gallery-item__overlay">
                         <span class="gallery-item__tag">Ürün</span>
                         <h3 class="gallery-item__title">Doğal Yalıtım Keçesi</h3>
@@ -103,7 +105,7 @@
                 </div>
 
                 <div class="gallery-item reveal-up" data-category="uygulama" style="--delay: 0.05s" id="gallery-2">
-                    <img src="../heros/hero-2.jpeg" alt="Çatı yalıtım uygulaması" loading="lazy">
+                    <img src="../assets/heros/hero-2.jpeg" alt="Çatı yalıtım uygulaması" loading="lazy">
                     <div class="gallery-item__overlay">
                         <span class="gallery-item__tag">Uygulama</span>
                         <h3 class="gallery-item__title">Çatı Yalıtımı</h3>
@@ -112,7 +114,7 @@
                 </div>
 
                 <div class="gallery-item reveal-up" data-category="uretim" style="--delay: 0.1s" id="gallery-3">
-                    <img src="../heros/hero-3.jpeg" alt="Üretim süreci" loading="lazy">
+                    <img src="../assets/heros/hero-3.jpeg" alt="Üretim süreci" loading="lazy">
                     <div class="gallery-item__overlay">
                         <span class="gallery-item__tag">Üretim</span>
                         <h3 class="gallery-item__title">İğneleme Fiksaj</h3>
@@ -121,7 +123,7 @@
                 </div>
 
                 <div class="gallery-item gallery-item--wide reveal-up" data-category="uygulama" style="--delay: 0.15s" id="gallery-4">
-                    <img src="../heros/hero-4.jpeg" alt="Duvar yalıtım uygulaması" loading="lazy">
+                    <img src="../assets/heros/hero-4.jpeg" alt="Duvar yalıtım uygulaması" loading="lazy">
                     <div class="gallery-item__overlay">
                         <span class="gallery-item__tag">Uygulama</span>
                         <h3 class="gallery-item__title">Duvar Yalıtımı</h3>
@@ -130,7 +132,7 @@
                 </div>
 
                 <div class="gallery-item reveal-up" data-category="urun" style="--delay: 0.2s" id="gallery-5">
-                    <img src="../heros/hero-5.jpeg" alt="Farklı kalınlıklarda ürünler" loading="lazy">
+                    <img src="../assets/heros/hero-5.jpeg" alt="Farklı kalınlıklarda ürünler" loading="lazy">
                     <div class="gallery-item__overlay">
                         <span class="gallery-item__tag">Ürün</span>
                         <h3 class="gallery-item__title">Ürün Çeşitleri</h3>
@@ -210,7 +212,7 @@
             <div class="footer__grid">
                 <div class="footer__brand">
                     <div class="footer__logo">
-                        <img src="../logolar/marterm_logo_beyaz.png" alt="Marterm Logo" class="footer__logo-img">
+                        <img src="../assets/logolar/marterm_logo_beyaz.png" alt="Marterm Logo" class="footer__logo-img">
                     </div>
                     <p class="footer__tagline">Doğal yalıtım çözümleri ile yeşil bir gelecek inşa ediyoruz.</p>
                     <div class="footer__social">

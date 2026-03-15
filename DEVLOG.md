@@ -52,3 +52,14 @@
 - ✅ **`main.js`**: `HeroScrollSequence` objeleri baştan yazılarak tek bir `ContinuousHeroScroll` kontrolcüsüne dönüştürüldü.
 - ✅ **`index.html` & `style.css`**: Hero sahnesi 7 aşamalı devasa bir tuvale (1400vh) dönüştürüldü. Kullanıcı aşağı doğru kaydırdıkça üretim sürecinin tüm aşamaları (Kusursuz Akustik, Termal Direnç, Nefes Alan Yapı vb.) metinlerin yumuşakça belirip kaybolmasıyla (Opacity CSS transition) eşzamanlı olarak arka planda akmaktadır. Devamlılık hissi ve bütünlük %100 oranında sağlandı.
 
+---
+
+## 📅 [16 Mart 2026] - Mobil Uyum ve Etkileşim İyileştirmeleri
+
+**Yapılan Değişiklikler:**
+- ✅ **Mobil Menü**: Tek bir overlay sistemi kurularak hem sayfa içi linklere hem de arka plana tıklandığında menünün pürüzsüz kapanması sağlandı.
+- ✅ **Video Hero**: WebP sekansları yerine yüksek kaliteli MP4 arka plan videosu eklendi; `object-fit: cover` yapısı korunarak mobil ekranlarda (`100vh`) genişliğin ölçeklendirilmesi sağlandı. Video üzerindeki slogan ve çağrı butonları mobil ekranlarda videoyu perdelememesi adına küçültülerek sol üst köşeye taşındı.
+- ✅ **Logo Banner**: Kayar (marquee) logo bandı sonsuz döngü sistemine getirildi, takılmalar giderildi.
+- ✅ **Ar-Ge Bölümü Görseli**: `hakkimizda.html` üzerindeki Placeholder "Patentli Ar-Ge Teknolojisi.jpeg" ile değiştirilerek `padding: 0` ve `object-fit: cover` ile kutuya tam olarak oturtuldu.
+
+**Sonuç:** GitHub'a güncel versiyon aktarıldı (Push yapıldı).

@@ -14,11 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function handleHeaderScroll() {
         const scrollY = window.scrollY;
 
-        if (scrollY > 50) {
-            header.classList.add('header--scrolled');
-        } else {
-            header.classList.remove('header--scrolled');
-        }
+        // Scroll darkening logic removed
 
         lastScroll = scrollY;
     }
@@ -193,9 +189,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 const start = i * step;
                 const end = start + step;
+                
+                // Get the overlay element
+                const overlay = this.section.querySelector('.hero-scroll__overlay');
 
                 if (progress >= start && progress < end) {
                     content.classList.remove('hero-content-hidden');
+                    
+                    // Toggle overlay direction based on content alignment
+                    if (overlay) {
+                        if (content.classList.contains('hero-scroll__content--right')) {
+                            overlay.classList.add('hero-scroll__overlay--right');
+                        } else {
+                            overlay.classList.remove('hero-scroll__overlay--right');
+                        }
+                    }
                     
                     const localProgress = (progress - start) / step;
                     
@@ -236,13 +244,13 @@ document.addEventListener('DOMContentLoaded', () => {
         ],
         indicatorId: 'scroll-indicator',
         sequences: [
-            { path: '/heros/videolar/herolar/video_1/', frames: 120 },
-            { path: '/heros/videolar/herolar/video_2/', frames: 120 },
-            { path: '/heros/videolar/herolar/video_3/', frames: 120 },
-            { path: '/heros/videolar/herolar/video_4/', frames: 120 },
-            { path: '/heros/videolar/herolar/video_5/', frames: 120 },
-            { path: '/heros/videolar/herolar/video_6/', frames: 120 },
-            { path: '/heros/videolar/herolar/video_7/', frames: 120 }
+            { path: '/assets/heros/videolar/herolar/video_1/', frames: 120 },
+            { path: '/assets/heros/videolar/herolar/video_2/', frames: 120 },
+            { path: '/assets/heros/videolar/herolar/video_3/', frames: 120 },
+            { path: '/assets/heros/videolar/herolar/video_4/', frames: 120 },
+            { path: '/assets/heros/videolar/herolar/video_5/', frames: 120 },
+            { path: '/assets/heros/videolar/herolar/video_6/', frames: 120 },
+            { path: '/assets/heros/videolar/herolar/video_7/', frames: 120 }
         ],
         hasIntro: true,
         introEndFrame: 51
@@ -322,7 +330,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function updateParallax() {
-        if (heroContent && !heroContent.classList.contains('fade-out')) {
+        if (typeof heroContent !== 'undefined' && heroContent && !heroContent.classList.contains('fade-out')) {
             const translateX = mouseX * 8;
             const translateY = mouseY * 5;
             heroContent.style.transform = `translate(${translateX}px, ${translateY}px)`;
@@ -341,7 +349,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!ticking) {
             requestAnimationFrame(() => {
                 handleHeaderScroll();
-                handleHeroScroll();
+                if (typeof continuousHero !== 'undefined' && continuousHero) continuousHero.handleScroll();
                 ticking = false;
             });
             ticking = true;
@@ -352,7 +360,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initial call
     handleHeaderScroll();
-    handleHeroScroll();
+    if (typeof continuousHero !== 'undefined' && continuousHero) continuousHero.handleScroll();
 
     // ============================
     // 8. PRELOADER FADE

@@ -161,21 +161,15 @@ img { max-width: 100%; display: block; }
     transition: all var(--t-smooth);
 }
 
-.header--scrolled {
-    background: var(--c-bg-glass);
-    backdrop-filter: blur(20px) saturate(180%);
-    -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border-bottom: 1px solid var(--c-border);
-}
 
 .header__inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 100%;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 0 clamp(1.25rem, 4vw, 3rem);
+    padding: 0 clamp(1.5rem, 5vw, 4rem);
 }
 
 .header__logo {
@@ -207,31 +201,45 @@ img { max-width: 100%; display: block; }
 .header__nav {
     display: flex;
     align-items: center;
+    gap: 0.75rem;
+}
+
+.header__nav-group {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 100px;
+    padding: 0.25rem;
     gap: 0.25rem;
 }
 
 .header__nav-link {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.25rem;
     font-size: 0.875rem;
     font-weight: 500;
     color: var(--c-text-secondary);
     border-radius: 100px;
+    background: transparent;
+    border: 1px solid transparent;
     transition: all var(--t-fast);
 }
 
 .header__nav-link:hover,
 .header__nav-link.active {
     color: var(--c-text);
-}
-
-.header__nav-link:hover {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.15);
 }
 
 .header__nav-link--cta {
     background: var(--c-accent-soft);
+    border: 1px solid transparent;
     color: var(--c-accent) !important;
     font-weight: 600;
+    padding: 0.65rem 1.25rem;
+    border-radius: 100px;
 }
 
 .header__nav-link--cta:hover {
@@ -370,6 +378,11 @@ img { max-width: 100%; display: block; }
     background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.3) 30%, transparent 50%);
     pointer-events: none;
     z-index: 2;
+    transition: background 0.4s ease;
+}
+
+.hero-scroll__overlay--right {
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.3) 30%, transparent 50%);
 }
 
 .hero-scroll__content {
@@ -389,6 +402,15 @@ img { max-width: 100%; display: block; }
 .hero-scroll__content.fade-out {
     opacity: 0;
     pointer-events: none;
+}
+
+.hero-scroll__content--right {
+    align-items: flex-end !important;
+    text-align: right !important;
+}
+
+.hero-scroll__content--right .hero__actions {
+    justify-content: flex-end !important;
 }
 
 .hero-scroll__content.hero-content-hidden {
@@ -422,6 +444,8 @@ img { max-width: 100%; display: block; }
 
 .hero__title-line {
     display: block;
+    padding-bottom: 0.2em;
+    margin-bottom: -0.2em;
 }
 
 .hero__title-line--accent {
@@ -1476,6 +1500,55 @@ img { max-width: 100%; display: block; }
 }
 
 @media (max-width: 768px) {
+    /* --- Mobile Responsive Fix for Header --- */
+    .header {
+        background: var(--c-bg) !important;
+    }
+
+
+    /* --- Mobile Responsive Fix for Hero Section --- */
+    .hero-scroll__sticky {
+        height: 100vh; /* Restored original height */
+        top: 0;
+    }
+
+    [id^="hero-canvas"] {
+        object-fit: cover; /* Back to original crop cover */
+    }
+
+    .hero-scroll__content {
+        justify-content: flex-start; /* Üst köşeye itiyoruz */
+        padding: calc(var(--header-h) + 2rem) 1.5rem 0 1.5rem; /* Menüye çarpmaması için üstten boşluk */
+    }
+
+    .hero__title {
+        font-size: clamp(1.8rem, 7vw, 2.2rem); /* Daha küçük başlık */
+        margin-bottom: 0.5rem;
+        line-height: 1.05;
+    }
+
+    .hero__subtitle {
+        font-size: 0.85rem; /* Daha küçük alt başlık */
+        margin-bottom: 1.25rem;
+        max-width: 90%; /* Satır çok uzamasın */
+    }
+
+    .hero__actions {
+        flex-direction: row; /* Butonları yan yana diz */
+        flex-wrap: wrap; /* Ekrana sığmazsa alt satıra geçsin */
+        width: auto;
+        gap: 0.5rem; /* Butonlar arası boşluk kısaltıldı */
+    }
+
+    .hero__actions .btn {
+        width: auto; /* Sadece içindeki yazı kadar genişlesin */
+        flex: 1 1 auto; /* Kalan alanı orantılı dağıt */
+        justify-content: center;
+        text-align: center;
+        padding: 0.6rem 1rem; /* Daha ince, küçük butonlar */
+        font-size: 0.85rem;
+    }
+
     .page-hero {
         min-height: 40vh;
         padding-top: calc(var(--header-h) + 2rem);
@@ -2682,7 +2755,7 @@ a.contact-card__value:hover {
     border-radius: var(--r-xl);
     background: var(--g-card);
     border: 1px solid var(--c-border);
-    padding: 3rem;
+    padding: 0; /* Changed from 3rem so the photo fills the box */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2694,6 +2767,13 @@ a.contact-card__value:hover {
     width: 60%;
     opacity: 0.5;
     filter: drop-shadow(0 0 20px rgba(255,255,255,0.1));
+}
+
+.about-rd__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .about-rd__badge {

@@ -12,8 +12,8 @@
     <meta property="og:url" content="https://marterm.com.tr">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="logolar/marterm_icon.png">
-    <link rel="apple-touch-icon" href="logolar/marterm_icon.png">
+    <link rel="icon" type="image/png" href="assets/logolar/marterm_icon.png">
+    <link rel="apple-touch-icon" href="assets/logolar/marterm_icon.png">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,22 +21,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=1.13">
+    <script src="js/main.js?v=1.4" defer></script>
 </head>
 <body>
     <!-- ===== HEADER ===== -->
     <header id="main-header" class="header">
         <div class="header__inner">
             <a href="/" class="header__logo" id="logo-link">
-                <img src="logolar/marterm_logo_beyaz.png" alt="Marterm Logo" class="header__logo-img">
+                <img src="assets/logolar/marterm_logo_beyaz.png" alt="Marterm Logo" class="header__logo-img">
             </a>
 
             <nav class="header__nav" id="main-nav">
-                <a href="/" class="header__nav-link active" id="nav-home">Anasayfa</a>
-                <a href="/pages/urunler.html" class="header__nav-link" id="nav-products">Ürünler</a>
-                <a href="/pages/hakkimizda.html" class="header__nav-link" id="nav-about">Hakkımızda</a>
-                <a href="/pages/galeri.html" class="header__nav-link" id="nav-gallery">Galeri</a>
-                <a href="/pages/katalog.html" class="header__nav-link" id="nav-catalog">Katalog</a>
+                <div class="header__nav-group">
+                    <a href="/" class="header__nav-link active" id="nav-home">Anasayfa</a>
+                    <a href="/pages/urunler.html" class="header__nav-link" id="nav-products">Ürünler</a>
+                    <a href="/pages/hakkimizda.html" class="header__nav-link" id="nav-about">Hakkımızda</a>
+                    <a href="/pages/galeri.html" class="header__nav-link" id="nav-gallery">Galeri</a>
+                    <a href="/pages/katalog.html" class="header__nav-link" id="nav-catalog">Katalog</a>
+                </div>
                 <a href="/pages/iletisim.html" class="header__nav-link header__nav-link--cta" id="nav-contact">İletişim</a>
             </nav>
 
@@ -91,40 +94,37 @@
                     <span class="hero__title-line">Üstün Ses<br></span>
                     <span class="hero__title-line hero__title-line--accent">Yutumu Sağlar</span>
                 </h1>
-                <p class="hero__subtitle">Keçi kıllarının benzersiz yapısıyla gürültüyü içeri hapsetmeyen, %60'a varan performans üstünlüğü.</p>
-                <div class="hero__actions">
-                    <a href="/pages/urunler.html" class="btn btn--primary">Performansı Keşfet</a>
-                </div>
+                <p class="hero__subtitle">Keçi kılının doğal lif yapısı, gürültüyü azaltmaya yardımcı olur ve yaşam alanlarında daha sakin bir akustik konfor sunar.</p>
             </div>
 
             <!-- SEQUENCE 3 CONTENT -->
             <div class="hero-scroll__content hero-content-hidden" id="hero-scroll-content-3">
                 <p class="hero__eyebrow">YÜKSEK TERMAL DİRENÇ</p>
                 <h1 class="hero__title">
-                    <span class="hero__title-line">Maksimum<br></span>
-                    <span class="hero__title-line hero__title-line--accent">Isı Yalıtımı</span>
+                    <span class="hero__title-line">Isıyı Koruyan<br></span>
+                    <span class="hero__title-line hero__title-line--accent">Doğal Güç</span>
                 </h1>
-                <p class="hero__subtitle">Gelişmiş lif teknolojisi, zorlu hava koşullarında dahi üstün termal stabilite sunarak enerji tasarrufu sağlar.</p>
+                <p class="hero__subtitle">Doğal keçi kılından geliştirilen Marterm keçesi, yapılarda ısı dengesini destekleyen etkili bir yalıtım katmanı sunar.</p>
             </div>
 
             <!-- SEQUENCE 4 CONTENT -->
-            <div class="hero-scroll__content hero-content-hidden" id="hero-scroll-content-4">
+            <div class="hero-scroll__content hero-content-hidden hero-scroll__content--right" id="hero-scroll-content-4">
                 <p class="hero__eyebrow">NEFES ALAN YAPI</p>
                 <h1 class="hero__title">
-                    <span class="hero__title-line">Doğal Nem<br></span>
-                    <span class="hero__title-line hero__title-line--accent">Dengesini Korur</span>
+                    <span class="hero__title-line">Nefes Alan<br></span>
+                    <span class="hero__title-line hero__title-line--accent">Doğal Yapı</span>
                 </h1>
-                <p class="hero__subtitle">Sentetik yalıtımların aksine yapının nefes almasına izin vererek iç mekan hava kalitesini ideal tutar.</p>
+                <p class="hero__subtitle">Doğal keçi kılı liflerinden geliştirilen Marterm keçesi, iç mekânda daha dengeli bir nem ve hava konforuna katkı sağlar.</p>
             </div>
 
             <!-- SEQUENCE 5 CONTENT -->
-            <div class="hero-scroll__content hero-content-hidden" id="hero-scroll-content-5">
+            <div class="hero-scroll__content hero-content-hidden hero-scroll__content--right" id="hero-scroll-content-5">
                 <p class="hero__eyebrow">ÇEVRECİ ÜRETİM</p>
                 <h1 class="hero__title">
-                    <span class="hero__title-line">Sürdürülebilir<br></span>
-                    <span class="hero__title-line hero__title-line--accent">ve Uzun Ömürlü</span>
+                    <span class="hero__title-line">Uzun Ömürlü<br></span>
+                    <span class="hero__title-line hero__title-line--accent">Doğal Yalıtım</span>
                 </h1>
-                <p class="hero__subtitle">Atık değil, %100 geri dönüştürülebilir organik hammaddelerden üretilir. Zamanla formunu veya etkinliğini kaybetmez.</p>
+                <p class="hero__subtitle">Marterm keçesi, doğal keçi kılı lifleriyle geliştirilen yapısı sayesinde dayanıklı ve sürdürülebilir bir çözüm sunar.</p>
             </div>
 
             <!-- SEQUENCE 6 CONTENT -->
@@ -298,7 +298,7 @@
             <div class="footer__grid">
                 <div class="footer__brand">
                     <div class="footer__logo">
-                        <img src="logolar/marterm_logo_beyaz.png" alt="Marterm Logo" class="footer__logo-img">
+                        <img src="assets/logolar/marterm_logo_beyaz.png" alt="Marterm Logo" class="footer__logo-img">
                     </div>
                     <p class="footer__tagline">Doğal yalıtım çözümleri ile yeşil bir gelecek inşa ediyoruz.</p>
                     <div class="footer__social">
