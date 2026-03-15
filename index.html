@@ -64,77 +64,100 @@
         </div>
     </div>
 
-    <!-- ===== HERO SECTION — Scroll Animated ===== -->
-    <section class="hero" id="hero-section">
-        <!-- Hero Slide 1 -->
-        <div class="hero__slide hero__slide--active" id="hero-slide-1" data-index="0">
-            <div class="hero__slide-bg">
-                <div class="hero__gradient hero__gradient--1"></div>
-            </div>
-            <div class="hero__content">
-                <p class="hero__eyebrow">Doğal Yalıtım Çözümleri</p>
+    <!-- ===== HERO SECTION — Apple-Style Continuous Scroll Animation ===== -->
+    <section class="hero-scroll" id="hero-scroll-section">
+        <div class="hero-scroll__sticky">
+            <canvas id="hero-canvas"></canvas>
+            <div class="hero-scroll__overlay"></div>
+            
+            <!-- SEQUENCE 1 CONTENT -->
+            <div class="hero-scroll__content" id="hero-scroll-content-1">
+                <p class="hero__eyebrow">DOĞAL YALITIM TEKNOLOJİSİ</p>
                 <h1 class="hero__title">
-                    <span class="hero__title-line">Yeşil Bir</span>
-                    <span class="hero__title-line hero__title-line--accent">Gelecek</span>
+                    <span class="hero__title-line">Doğadan Gelen<br></span>
+                    <span class="hero__title-line hero__title-line--accent">Yeni Nesil Yalıtım</span>
                 </h1>
-                <p class="hero__subtitle">Doğadan ilham alan, çevre dostu ısı yalıtım malzemeleri ile sürdürülebilir yaşam alanları inşa ediyoruz.</p>
+                <p class="hero__subtitle">Keçi kılı teknolojisiyle geliştirilen ses ve termal yalıtım çözümleri.</p>
                 <div class="hero__actions">
-                    <a href="/pages/urunler.html" class="btn btn--primary" id="hero-cta-1">Ürünleri Keşfet</a>
-                    <a href="/pages/katalog.html" class="btn btn--ghost" id="hero-catalog-btn">Katalog İndir</a>
+                    <a href="/pages/urunler.html" class="btn btn--primary" id="hero-cta-1">Ürünleri İncele</a>
+                    <a href="/pages/katalog.html" class="btn btn--ghost" id="hero-catalog-btn">Kataloğu İndir</a>
                 </div>
             </div>
-        </div>
 
-        <!-- Hero Slide 2 -->
-        <div class="hero__slide" id="hero-slide-2" data-index="1">
-            <div class="hero__slide-bg">
-                <div class="hero__gradient hero__gradient--2"></div>
-            </div>
-            <div class="hero__content">
-                <p class="hero__eyebrow">Patentli Teknoloji ile Üstün Yalıtım</p>
+            <!-- SEQUENCE 2 CONTENT -->
+            <div class="hero-scroll__content hero-content-hidden" id="hero-scroll-content-2">
+                <p class="hero__eyebrow">KUSURSUZ AKUSTİK</p>
                 <h1 class="hero__title">
-                    <span class="hero__title-line">%60 Daha</span>
-                    <span class="hero__title-line hero__title-line--accent">Performanslı</span>
+                    <span class="hero__title-line">Üstün Ses<br></span>
+                    <span class="hero__title-line hero__title-line--accent">Yutumu Sağlar</span>
                 </h1>
-                <p class="hero__subtitle">Rakiplerine kıyasla ısı ve ses yalıtımında %60 daha yüksek performans gösteren, yanmaz ve güvenli çözüm.</p>
+                <p class="hero__subtitle">Keçi kıllarının benzersiz yapısıyla gürültüyü içeri hapsetmeyen, %60'a varan performans üstünlüğü.</p>
                 <div class="hero__actions">
-                    <a href="/pages/urunler.html" class="btn btn--primary" id="hero-cta-2">Detayları İncele</a>
+                    <a href="/pages/urunler.html" class="btn btn--primary">Performansı Keşfet</a>
                 </div>
             </div>
-        </div>
 
-        <!-- Hero Slide 3 -->
-        <div class="hero__slide" id="hero-slide-3" data-index="2">
-            <div class="hero__slide-bg">
-                <div class="hero__gradient hero__gradient--3"></div>
-            </div>
-            <div class="hero__content">
-                <p class="hero__eyebrow">Milli Üretime & Sosyal Etkiye Destek</p>
+            <!-- SEQUENCE 3 CONTENT -->
+            <div class="hero-scroll__content hero-content-hidden" id="hero-scroll-content-3">
+                <p class="hero__eyebrow">YÜKSEK TERMAL DİRENÇ</p>
                 <h1 class="hero__title">
-                    <span class="hero__title-line">Göçebe</span>
-                    <span class="hero__title-line hero__title-line--accent">Ekonomisi</span>
+                    <span class="hero__title-line">Maksimum<br></span>
+                    <span class="hero__title-line hero__title-line--accent">Isı Yalıtımı</span>
                 </h1>
-                <p class="hero__subtitle">Atıl durumdaki keçi kıllarını değerlendiriyor, yarı göçebe yetiştiricilerimizin geçim kaynağına ve milli servete katkı sağlıyoruz.</p>
+                <p class="hero__subtitle">Gelişmiş lif teknolojisi, zorlu hava koşullarında dahi üstün termal stabilite sunarak enerji tasarrufu sağlar.</p>
+            </div>
+
+            <!-- SEQUENCE 4 CONTENT -->
+            <div class="hero-scroll__content hero-content-hidden" id="hero-scroll-content-4">
+                <p class="hero__eyebrow">NEFES ALAN YAPI</p>
+                <h1 class="hero__title">
+                    <span class="hero__title-line">Doğal Nem<br></span>
+                    <span class="hero__title-line hero__title-line--accent">Dengesini Korur</span>
+                </h1>
+                <p class="hero__subtitle">Sentetik yalıtımların aksine yapının nefes almasına izin vererek iç mekan hava kalitesini ideal tutar.</p>
+            </div>
+
+            <!-- SEQUENCE 5 CONTENT -->
+            <div class="hero-scroll__content hero-content-hidden" id="hero-scroll-content-5">
+                <p class="hero__eyebrow">ÇEVRECİ ÜRETİM</p>
+                <h1 class="hero__title">
+                    <span class="hero__title-line">Sürdürülebilir<br></span>
+                    <span class="hero__title-line hero__title-line--accent">ve Uzun Ömürlü</span>
+                </h1>
+                <p class="hero__subtitle">Atık değil, %100 geri dönüştürülebilir organik hammaddelerden üretilir. Zamanla formunu veya etkinliğini kaybetmez.</p>
+            </div>
+
+            <!-- SEQUENCE 6 CONTENT -->
+            <div class="hero-scroll__content hero-content-hidden" id="hero-scroll-content-6">
+                <p class="hero__eyebrow">KOLAY UYGULAMA</p>
+                <h1 class="hero__title">
+                    <span class="hero__title-line">Hızlı ve Esnek<br></span>
+                    <span class="hero__title-line hero__title-line--accent">Montaj İmkanı</span>
+                </h1>
+                <p class="hero__subtitle">Tozuma yapmaz, kaşıntıya yol açmaz. Tüm yüzey tiplerine uygun pratik uygulama avantajı.</p>
+            </div>
+
+            <!-- SEQUENCE 7 CONTENT -->
+            <div class="hero-scroll__content hero-content-hidden" id="hero-scroll-content-7">
+                <p class="hero__eyebrow">GELECEĞİN YALITIMI</p>
+                <h1 class="hero__title">
+                    <span class="hero__title-line">Marterm Farkını<br></span>
+                    <span class="hero__title-line hero__title-line--accent">Yaşamaya Başlayın</span>
+                </h1>
+                <p class="hero__subtitle">Doğanın gücünü modern mühendislikle birleştiren nihai çözüm.</p>
                 <div class="hero__actions">
-                    <a href="/pages/hakkimizda.html" class="btn btn--primary" id="hero-cta-3">Hikayemizi Okuyun</a>
+                    <a href="/pages/iletisim.html" class="btn btn--primary">Hemen İletişime Geçin</a>
                 </div>
             </div>
-        </div>
 
-        <!-- Scroll Progress -->
-        <div class="hero__progress" id="hero-progress">
-            <div class="hero__progress-dot hero__progress-dot--active" data-slide="0"></div>
-            <div class="hero__progress-dot" data-slide="1"></div>
-            <div class="hero__progress-dot" data-slide="2"></div>
-        </div>
-
-        <!-- Scroll Indicator -->
-        <div class="hero__scroll-indicator" id="scroll-indicator">
-            <span>Keşfet</span>
-            <div class="hero__scroll-arrow">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M12 5v14M5 12l7 7 7-7"/>
-                </svg>
+            <!-- Scroll Indicator -->
+            <div class="hero__scroll-indicator" id="scroll-indicator">
+                <span>Keşfet</span>
+                <div class="hero__scroll-arrow">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 5v14M5 12l7 7 7-7"/>
+                    </svg>
+                </div>
             </div>
         </div>
     </section>

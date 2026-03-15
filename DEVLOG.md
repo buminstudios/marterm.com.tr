@@ -42,3 +42,13 @@
 **Bekleyen Adımlar:**
 - ⚠️ Görüntünün yüklenmesi: `images/keci_kili_mikroskop.jpg` görseli geçici API yoğunluğundan dolayı oluşturulamadı. (Şimdilik boş kalabilir, stok görsel eklenebilir)
 - ✅ **`hakkimizda.html`** yapısı onarıldı: Kesik kalan kod yapıları düzeltildi ve liste kapatıldı.
+
+---
+
+## 📅 [15 Mart 2026] - Sürükleyici Apple Tarzı Scroll Deneyimi
+
+**Yapılan Değişiklikler:**
+- ✅ **`videolar/herolar`** dizinindeki 120'şer karelik 7 farklı render çıktısı, yüksek kaliteli `.webp` sekansları olarak entegre edildi.
+- ✅ **`main.js`**: `HeroScrollSequence` objeleri baştan yazılarak tek bir `ContinuousHeroScroll` kontrolcüsüne dönüştürüldü.
+- ✅ **`index.html` & `style.css`**: Hero sahnesi 7 aşamalı devasa bir tuvale (1400vh) dönüştürüldü. Kullanıcı aşağı doğru kaydırdıkça üretim sürecinin tüm aşamaları (Kusursuz Akustik, Termal Direnç, Nefes Alan Yapı vb.) metinlerin yumuşakça belirip kaybolmasıyla (Opacity CSS transition) eşzamanlı olarak arka planda akmaktadır. Devamlılık hissi ve bütünlük %100 oranında sağlandı.
+
