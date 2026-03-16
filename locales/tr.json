@@ -264,5 +264,17 @@
     "form_msg_lbl": "Mesajınız",
     "form_msg_ph": "Size nasıl yardımcı olabiliriz?",
     "form_btn": "Mesajı Gönder"
+  },
+  "common": {
+    "nav_home": "Anasayfa",
+    "nav_products": "Ürünler",
+    "nav_about": "Hakkımızda",
+    "nav_gallery": "Galeri",
+    "nav_catalog": "Katalog",
+    "nav_contact": "İletişim",
+    "footer_desc": "Doğadan aldığımız ilhamla, sürdürülebilir ve sağlıklı yaşam alanları inşa etmek için yenilikçi yalıtım çözümleri üretiyoruz.",
+    "footer_links": "Hızlı Linkler",
+    "footer_contact": "İletişim",
+    "footer_rights": "Tüm Hakları Saklıdır."
   }
 }

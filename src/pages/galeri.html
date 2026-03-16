@@ -51,13 +51,13 @@
 
             <nav class="header__nav" id="main-nav">
                 <div class="header__nav-group">
-                    <a href="/" class="header__nav-link" id="nav-home">Anasayfa</a>
-                    <a href="/pages/urunler.html" class="header__nav-link" id="nav-products">Ürünler</a>
+                    <a href="/" class="header__nav-link" id="nav-home">{{ common.nav_home }}</a>
+                    <a href="/pages/urunler.html" class="header__nav-link" id="nav-products">{{ common.nav_products }}</a>
                     <a href="/pages/hakkimizda.html" class="header__nav-link" id="nav-about">Hakkımızda</a>
-                    <a href="/pages/galeri.html" class="header__nav-link active" id="nav-gallery">Galeri</a>
+                    <a href="/pages/galeri.html" class="header__nav-link active" id="nav-gallery">{{ common.nav_gallery }}</a>
                     <a href="/pages/katalog.html" class="header__nav-link" id="nav-catalog">Katalog</a>
                 </div>
-                <a href="/pages/iletisim.html" class="header__nav-link header__nav-link--cta" id="nav-contact">İletişim</a>
+                <a href="/pages/iletisim.html" class="header__nav-link header__nav-link--cta" id="nav-contact">{{ common.nav_contact }}</a>
             </nav>
 
             <button class="header__menu-btn" id="menu-toggle" aria-label="Menüyü aç">
@@ -71,12 +71,12 @@
     <!-- ===== MOBILE MENU ===== -->
     <div class="mobile-menu" id="mobile-menu">
         <nav class="mobile-menu__nav">
-            <a href="/" class="mobile-menu__link">Anasayfa</a>
-            <a href="/pages/urunler.html" class="mobile-menu__link">Ürünler</a>
+            <a href="/" class="mobile-menu__link">{{ common.nav_home }}</a>
+            <a href="/pages/urunler.html" class="mobile-menu__link">{{ common.nav_products }}</a>
             <a href="/pages/hakkimizda.html" class="mobile-menu__link">Hakkımızda</a>
-            <a href="/pages/galeri.html" class="mobile-menu__link active">Galeri</a>
+            <a href="/pages/galeri.html" class="mobile-menu__link active">{{ common.nav_gallery }}</a>
             <a href="/pages/katalog.html" class="mobile-menu__link">Katalog</a>
-            <a href="/pages/iletisim.html" class="mobile-menu__link">İletişim</a>
+            <a href="/pages/iletisim.html" class="mobile-menu__link">{{ common.nav_contact }}</a>
         </nav>
         <div class="mobile-menu__footer">
             <p>+90 (533) 473 83 46</p>
@@ -424,15 +424,15 @@
 
                 <div class="footer__links">
                     <h4 class="footer__heading">Sayfalar</h4>
-                    <a href="/" class="footer__link">Anasayfa</a>
-                    <a href="/pages/urunler.html" class="footer__link">Ürünler</a>
+                    <a href="/" class="footer__link">{{ common.nav_home }}</a>
+                    <a href="/pages/urunler.html" class="footer__link">{{ common.nav_products }}</a>
                     <a href="/pages/hakkimizda.html" class="footer__link">Hakkımızda</a>
-                    <a href="/pages/galeri.html" class="footer__link">Galeri</a>
+                    <a href="/pages/galeri.html" class="footer__link">{{ common.nav_gallery }}</a>
                     <a href="/pages/katalog.html" class="footer__link">Katalog</a>
                 </div>
 
                 <div class="footer__links">
-                    <h4 class="footer__heading">İletişim</h4>
+                    <h4 class="footer__heading">{{ common.nav_contact }}</h4>
                     <a href="tel:+905334738346" class="footer__link">+90 (533) 473 83 46</a>
                     <a href="mailto:info@marterm.com.tr" class="footer__link">info@marterm.com.tr</a>
                     <p class="footer__link footer__link--static">Akif İnan Mah. 5007. Sk.<br>Sühakent Sitesi Altı B Blok No:8<br>Kahramanmaraş / Türkiye</p>

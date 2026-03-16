@@ -1,4 +1,21 @@
 {
+  "nav": {
+    "home": "Home",
+    "corporate": "Corporate",
+    "products": "Products",
+    "gallery": "Gallery",
+    "contact": "Contact",
+    "catalog": "E-Catalog"
+  },
+  "hero": {
+    "subtitle": "INSULATION TECHNOLOGY OF THE FUTURE",
+    "title": "Temperature is Under Control \n<span class=\"text-accent\">with Marterm</span>",
+    "desc": "We breathe life into buildings with new generation aerogel-based insulation solutions, bringing energy efficiency together with aesthetics. Build tomorrow today with our 100% eco-friendly and A1 class non-combustible materials.",
+    "cta_primary": "Discover Products",
+    "cta_secondary": "Contact Us",
+    "stats_energy": "<span>Up to 45%</span> Energy Saving",
+    "stats_class": "A1 Class Fireproof"
+  },
   "products_page": {
     "title": "Products — Marterm | Natural Insulation Solutions",
     "desc": "Marterm natural insulation products: goat hair and polyester fiber blend for roof, wall, residential, and industrial insulation solutions.",
@@ -126,7 +143,25 @@
     "cta_title_accent": "for Your Project",
     "cta_desc": "Our expert team is with you to determine the most suitable product and thickness for your project.",
     "cta_btn_contact": "Get a Quote",
-    "cta_btn_catalog": "Download Catalog"
+    "cta_btn_catalog": "Download Catalog",
+    "cat_lbl": "Product Categories",
+    "cat_all": "All Products",
+    "cat_roof": "Roof Insulation",
+    "cat_wall": "Wall Insulation",
+    "cat_acc": "Acoustic Insulation",
+    "item1_title": "10mm Acoustic Floor Felt",
+    "item1_desc": "Specialized for inter-floor impact sound and vibration control. Made from 100% natural goat hair.",
+    "item2_title": "50mm Wall Insulation Panel",
+    "item2_desc": "High-density natural panel intended for partition walls and exterior wall insulation. Eco-friendly heat preservation.",
+    "item3_title": "30mm Roof Underlay Insulation",
+    "item3_desc": "Designed to reduce heat loss under roofs and provide a breathable structure.",
+    "m_head": "Materials",
+    "m_p1": "Our products are made of 100% natural goat hair.",
+    "m_p2": "Goat hair consists of keratin, providing excellent natural acoustic and thermal properties.",
+    "v_thermal": "High Thermal Resistance",
+    "v_acoustic": "Acoustic Comfort",
+    "v_fire": "Fire Resistance",
+    "v_tensile": "Tensile Strength"
   },
   "about_page": {
     "title": "About Us — Marterm | Insulating the Future",
@@ -247,5 +282,17 @@
     "form_msg_lbl": "Your Message",
     "form_msg_ph": "How can we help you?",
     "form_btn": "Send Message"
+  },
+  "common": {
+    "nav_home": "Home",
+    "nav_products": "Products",
+    "nav_about": "About Us",
+    "nav_gallery": "Gallery",
+    "nav_catalog": "Catalog",
+    "nav_contact": "Contact",
+    "footer_desc": "Inspired by nature, we produce innovative insulation solutions to build sustainable and healthy living spaces.",
+    "footer_links": "Quick Links",
+    "footer_contact": "Contact",
+    "footer_rights": "All Rights Reserved."
   }
 }
