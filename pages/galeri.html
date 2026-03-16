@@ -22,6 +22,24 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        .gallery-item::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.4), transparent 50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+        .gallery-item:hover::after {
+            opacity: 1;
+        }
+    </style>
 </head>
 <body>
     <!-- ===== HEADER ===== -->
@@ -82,118 +100,289 @@
         </div>
     </section>
 
-    <!-- ===== GALLERY FILTER ===== -->
-    <section class="gallery-section" id="gallery-section">
+    <section class="gallery" id="gallery-grid" style="padding: 100px 0;">
         <div class="container">
-            <div class="gallery-filter reveal-up" id="gallery-filter">
-                <button class="gallery-filter__btn active" data-filter="all">Tümü</button>
-                <button class="gallery-filter__btn" data-filter="urun">Ürünler</button>
-                <button class="gallery-filter__btn" data-filter="uygulama">Uygulamalar</button>
-                <button class="gallery-filter__btn" data-filter="uretim">Üretim</button>
+            <div class="section-header reveal-up">
+                <p class="section-header__eyebrow">Bizden Kareler</p>
+                <h2 class="section-header__title">Marterm <span class="text-accent">Galeri</span></h2>
+                <p class="section-header__desc">Üretim tesisimizden, uygulama alanlarından ve katıldığımız fuarlardan anlar.</p>
             </div>
+            
+            <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 3rem;">
 
-            <!-- ===== GALLERY GRID ===== -->
-            <div class="gallery-grid" id="gallery-grid">
-                <!-- Ürün Görselleri -->
-                <div class="gallery-item gallery-item--tall reveal-up" data-category="urun" id="gallery-1">
-                    <img src="../assets/images/keci_kili_mikroskop.jpeg" alt="Marterm doğal yalıtım keçesi yakın çekim" loading="lazy">
-                    <div class="gallery-item__overlay">
-                        <span class="gallery-item__tag">Ürün</span>
-                        <h3 class="gallery-item__title">Doğal Yalıtım Keçesi</h3>
-                        <p class="gallery-item__desc">Keçi kılı ve polyester lif karışımı</p>
-                    </div>
+                <div class="gallery-item reveal-up" style="--delay: 0s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/05ce71fd-4590-4259-b8e9-11ef78a2a4de.jpg" alt="Marterm Galeri 1" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
                 </div>
 
-                <div class="gallery-item reveal-up" data-category="uygulama" style="--delay: 0.05s" id="gallery-2">
-                    <img src="../assets/heros/hero-7.jpeg" alt="Çatı yalıtım uygulaması" loading="lazy">
-                    <div class="gallery-item__overlay">
-                        <span class="gallery-item__tag">Uygulama</span>
-                        <h3 class="gallery-item__title">Çatı Yalıtımı</h3>
-                        <p class="gallery-item__desc">Mertek arası uygulama</p>
-                    </div>
+                <div class="gallery-item reveal-up" style="--delay: 0.1s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/0c1f6324-f024-48cd-8540-1a56dd803834.jpg" alt="Marterm Galeri 2" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
                 </div>
 
-                <div class="gallery-item reveal-up" data-category="uretim" style="--delay: 0.1s" id="gallery-3">
-                    <img src="../assets/images/Patentli Ar-Ge Teknolojisi.jpeg" alt="Üretim süreci" loading="lazy">
-                    <div class="gallery-item__overlay">
-                        <span class="gallery-item__tag">Üretim</span>
-                        <h3 class="gallery-item__title">İğneleme Fiksaj</h3>
-                        <p class="gallery-item__desc">Üretim teknolojimiz</p>
-                    </div>
+                <div class="gallery-item reveal-up" style="--delay: 0.2s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/1.jpg" alt="Marterm Galeri 3" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
                 </div>
 
-                <div class="gallery-item gallery-item--wide reveal-up" data-category="uygulama" style="--delay: 0.15s" id="gallery-4">
-                    <img src="../assets/heros/hero-7.jpeg" alt="Duvar yalıtım uygulaması" loading="lazy">
-                    <div class="gallery-item__overlay">
-                        <span class="gallery-item__tag">Uygulama</span>
-                        <h3 class="gallery-item__title">Duvar Yalıtımı</h3>
-                        <p class="gallery-item__desc">İç cephe alçıpan arkası</p>
-                    </div>
+                <div class="gallery-item reveal-up" style="--delay: 0.30000000000000004s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/1111cami-scaled.jpg" alt="Marterm Galeri 4" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
                 </div>
 
-                <div class="gallery-item reveal-up" data-category="urun" style="--delay: 0.2s" id="gallery-5">
-                    <img src="../assets/images/keci_kili_mikroskop.jpeg" alt="Farklı kalınlıklarda ürünler" loading="lazy">
-                    <div class="gallery-item__overlay">
-                        <span class="gallery-item__tag">Ürün</span>
-                        <h3 class="gallery-item__title">Ürün Çeşitleri</h3>
-                        <p class="gallery-item__desc">2.5 – 11.5 mm kalınlık</p>
-                    </div>
+                <div class="gallery-item reveal-up" style="--delay: 0.4s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/2.jpg" alt="Marterm Galeri 5" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
                 </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/222cami-scaled.jpg" alt="Marterm Galeri 6" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.1s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/274dc27e-3a74-491d-8530-f35f4899fdbb.jpg" alt="Marterm Galeri 7" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.2s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/3.jpg" alt="Marterm Galeri 8" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.30000000000000004s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/399623d3-d161-4dd6-888b-f95d6dd2de72.jpg" alt="Marterm Galeri 9" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.4s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/4347a8ac-fe59-4f19-bca5-fa59d6858dec.jpg" alt="Marterm Galeri 10" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/458757b2-cab5-4aed-9816-b31fbabec185.jpg" alt="Marterm Galeri 11" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.1s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/49c67084-a78f-4e03-a5a8-6593d324312a.jpg" alt="Marterm Galeri 12" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.2s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/5fc9dcee-e91f-4482-8f41-4a37cbe5e27c.jpg" alt="Marterm Galeri 13" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.30000000000000004s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/7937e060-dea9-44a1-a874-3928ce750867.jpg" alt="Marterm Galeri 14" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.4s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/9d574984-3c40-4d42-bee5-70544dcf506b.jpg" alt="Marterm Galeri 15" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/9e2cccff-c123-4712-8a03-1de33cd2b7ca.jpg" alt="Marterm Galeri 16" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.1s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/9ed30250-32da-44cf-9e9d-172af0a3f517.jpg" alt="Marterm Galeri 17" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.2s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/PHOTO-2024-03-09-12-02-02-6.jpg" alt="Marterm Galeri 18" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.30000000000000004s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/PHOTO-2024-03-09-12-02-03-2.jpg" alt="Marterm Galeri 19" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.4s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/PHOTO-2024-03-27-14-21-09-14.jpg" alt="Marterm Galeri 20" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/PHOTO-2024-03-27-14-21-39-3.jpg" alt="Marterm Galeri 21" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.1s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/PHOTO-2024-03-27-14-21-39-6.jpg" alt="Marterm Galeri 22" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.2s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/PHOTO-2024-03-27-14-26-22-2.jpg" alt="Marterm Galeri 23" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.30000000000000004s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/PHOTO-2024-03-27-14-26-22.jpg" alt="Marterm Galeri 24" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.4s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/RXJC8338.jpg" alt="Marterm Galeri 25" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/SADX5799.jpg" alt="Marterm Galeri 26" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.1s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/WhatsApp-Image-2023-07-31-at-08.33.52-2.jpeg" alt="Marterm Galeri 27" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.2s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/WhatsApp-Image-2023-07-31-at-08.33.53.jpeg" alt="Marterm Galeri 28" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.30000000000000004s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/WhatsApp-Image-2023-07-31-at-08.36.12-1.jpeg" alt="Marterm Galeri 29" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.4s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/WhatsApp-Image-2023-07-31-at-08.36.12.jpeg" alt="Marterm Galeri 30" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/WhatsApp-Image-2023-07-31-at-08.38.22-1.jpeg" alt="Marterm Galeri 31" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.1s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/WhatsApp-Image-2023-07-31-at-08.38.22-10.jpeg" alt="Marterm Galeri 32" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.2s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/WhatsApp-Image-2023-07-31-at-08.38.22-11.jpeg" alt="Marterm Galeri 33" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.30000000000000004s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/WhatsApp-Image-2023-07-31-at-08.38.22-2.jpeg" alt="Marterm Galeri 34" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.4s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/WhatsApp-Image-2023-07-31-at-08.38.22-3.jpeg" alt="Marterm Galeri 35" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/WhatsApp-Image-2023-07-31-at-08.38.22-4.jpeg" alt="Marterm Galeri 36" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.1s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/WhatsApp-Image-2023-07-31-at-08.38.22-5.jpeg" alt="Marterm Galeri 37" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.2s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/WhatsApp-Image-2023-07-31-at-08.38.22-6.jpeg" alt="Marterm Galeri 38" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.30000000000000004s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/WhatsApp-Image-2023-07-31-at-08.38.22-7.jpeg" alt="Marterm Galeri 39" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.4s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/WhatsApp-Image-2023-07-31-at-08.38.22-8.jpeg" alt="Marterm Galeri 40" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/WhatsApp-Image-2023-07-31-at-08.38.22-9.jpeg" alt="Marterm Galeri 41" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.1s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/WhatsApp-Image-2023-07-31-at-08.38.22.jpeg" alt="Marterm Galeri 42" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.2s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/WhatsApp-Image-2023-07-31-at-15.00.54-1.jpeg" alt="Marterm Galeri 43" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.30000000000000004s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/WhatsApp-Image-2023-07-31-at-15.00.54.jpeg" alt="Marterm Galeri 44" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.4s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/WhatsApp-Image-2023-08-01-at-17.45.33-1.jpeg" alt="Marterm Galeri 45" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/WhatsApp-Image-2023-12-11-at-12.30.00-1.jpeg" alt="Marterm Galeri 46" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.1s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/WhatsApp-Image-2023-12-11-at-12.30.00-3.jpeg" alt="Marterm Galeri 47" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.2s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/WhatsApp-Image-2023-12-11-at-12.30.00.jpeg" alt="Marterm Galeri 48" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.30000000000000004s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/WhatsApp-Image-2023-12-11-at-12.43.55.jpeg" alt="Marterm Galeri 49" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.4s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/WhatsApp-Image-2023-12-11-at-12.43.57.jpeg" alt="Marterm Galeri 50" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/WhatsApp-Image-2023-12-11-at-12.44.02-1.jpeg" alt="Marterm Galeri 51" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.1s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/WhatsApp-Image-2023-12-11-at-12.44.04.jpeg" alt="Marterm Galeri 52" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.2s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/WhatsApp-Image-2023-12-11-at-12.44.05.jpeg" alt="Marterm Galeri 53" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.30000000000000004s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/WhatsApp-Image-2024-08-09-at-15.44.32-1.jpeg" alt="Marterm Galeri 54" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.4s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/WhatsApp-Image-2024-08-09-at-15.44.32.jpeg" alt="Marterm Galeri 55" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/a.jpg" alt="Marterm Galeri 56" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.1s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/a3894c4a-dbdf-4c4e-ac97-f25c7e1005a3.jpg" alt="Marterm Galeri 57" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.2s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/alcipan11.jpeg" alt="Marterm Galeri 58" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.30000000000000004s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/alcipan2.jpeg" alt="Marterm Galeri 59" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.4s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/alcipan33.jpeg" alt="Marterm Galeri 60" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/cati11-scaled.jpg" alt="Marterm Galeri 61" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.1s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/cati22-scaled.jpg" alt="Marterm Galeri 62" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.2s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/cati333-scaled.jpg" alt="Marterm Galeri 63" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.30000000000000004s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/cd53ecce-5da3-461f-8d16-7655f34eab31.jpg" alt="Marterm Galeri 64" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.4s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/dc15a4e0-bf0b-436e-9dbd-4b1ed271e7dd.jpg" alt="Marterm Galeri 65" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/e72e2f69-03b0-467a-9097-d1a6c3c12abd.jpg" alt="Marterm Galeri 66" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.1s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri/slayddd2.jpg" alt="Marterm Galeri 67" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- ===== FEATURES HIGHLIGHT ===== -->
-    <section class="gallery-features" id="gallery-features">
-        <div class="container">
-            <p class="section-eyebrow reveal-up">Neden Marterm?</p>
-            <h2 class="section-title reveal-up">Farkımızı <span class="text-accent">Görsellerde Görün</span></h2>
-
-            <div class="gallery-features__grid">
-                <div class="gallery-feature reveal-up" id="gf-1">
-                    <div class="gallery-feature__icon">
-                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-                    </div>
-                    <h3 class="gallery-feature__title">%100 Doğal</h3>
-                    <p class="gallery-feature__desc">Keçi kılı lifinden üretilen, tamamen biyolojik bozunabilir ve çevre dostu yalıtım malzemesi.</p>
-                </div>
-                <div class="gallery-feature reveal-up" style="--delay: 0.1s" id="gf-2">
-                    <div class="gallery-feature__icon">
-                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                    </div>
-                    <h3 class="gallery-feature__title">Yangın Güvenliği</h3>
-                    <p class="gallery-feature__desc">B-s1, d0 yangın sınıfı ile alev almaz ve damlama yapmaz güvenli yapı.</p>
-                </div>
-                <div class="gallery-feature reveal-up" style="--delay: 0.2s" id="gf-3">
-                    <div class="gallery-feature__icon">
-                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
-                    </div>
-                    <h3 class="gallery-feature__title">Ses Yalıtımı</h3>
-                    <p class="gallery-feature__desc">NRC 0.75–0.85 değeri ile üstün akustik performans ve sessiz yaşam alanları.</p>
-                </div>
-                <div class="gallery-feature reveal-up" style="--delay: 0.3s" id="gf-4">
-                    <div class="gallery-feature__icon">
-                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-                    </div>
-                    <h3 class="gallery-feature__title">Sertifikalı</h3>
-                    <p class="gallery-feature__desc">ISO ve ASTM standartlarına uygun, üniversite laboratuvar testleriyle onaylanmış performans.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== LIGHTBOX ===== -->
-    <div class="lightbox" id="lightbox">
-        <button class="lightbox__close" id="lightbox-close" aria-label="Kapat">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-        </button>
-        <div class="lightbox__content">
-            <img src="" alt="" id="lightbox-img">
-        </div>
-    </div>
-
-    <!-- ===== CTA SECTION ===== -->
-    <section class="cta-section" id="gallery-cta">
+<section class="cta-section" id="gallery-cta">
         <div class="container">
             <div class="cta-section__inner reveal-up">
                 <h2 class="cta-section__title">Projeleriniz İçin<br><span class="text-accent">Detaylı Görsel</span> İsteyin</h2>
