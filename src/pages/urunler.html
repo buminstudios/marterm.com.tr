@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ürünler — Marterm | Doğal Yalıtım Çözümleri</title>
-    <meta name="description" content="Marterm doğal yalıtım ürünleri: keçi kılı ve polyester lif karışımı ile çatı, duvar, konut ve endüstriyel yalıtım çözümleri.">
+    <title>{{ products_page.title }}</title>
+    <meta name="description" content="{{ products_page.desc }}">
     <meta name="keywords" content="yalıtım ürünleri, keçi kılı keçe, doğal yalıtım, çatı yalıtımı, duvar yalıtımı, Marterm">
-    <meta property="og:title" content="Ürünler — Marterm">
-    <meta property="og:description" content="Doğal ve çevre dostu ısı yalıtım ürünleri.">
+    <meta property="og:title" content="{{ products_page.title }}">
+    <meta property="og:description" content="{{ products_page.desc }}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://marterm.com.tr/pages/urunler.html">
 
@@ -73,11 +73,11 @@
         </div>
         <div class="container">
             <div class="page-hero__content">
-                <p class="hero__eyebrow reveal-up">Ürün Ailemiz</p>
+                <p class="hero__eyebrow reveal-up">{{ products_page.hero_eyebrow }}</p>
                 <h1 class="page-hero__title reveal-up">
-                    Doğal Yalıtım<br><span class="text-accent">Ürünleri</span>
+                    {{ products_page.hero_title }}<br><span class="text-accent">{{ products_page.hero_title_accent }}</span>
                 </h1>
-                <p class="page-hero__desc reveal-up">Milli servetimiz keçi kıllarının gücüyle tasarlanmış patentli teknoloji. Rakiplerine kıyasla %60 daha yüksek ısı ve akustik performans sağlayan doğal yalıtım ailemiz.</p>
+                <p class="page-hero__desc reveal-up">{{ products_page.hero_desc }}</p>
             </div>
         </div>
     </section>
@@ -86,9 +86,9 @@
     <section class="product-variants" id="product-variants">
         <div class="container">
             <div class="section-header reveal-up">
-                <p class="section-header__eyebrow">Ürün Çeşitleri</p>
-                <h2 class="section-header__title">Kalınlığa Göre<br><span class="text-accent">Keçe Yalıtım Ürünleri</span></h2>
-                <p class="section-header__desc">İğneleme fiksaj tekniği ile üretilen keçi kılı + polyester lif karışımı doğal yalıtım keçelerimiz, farklı kalınlık ve yoğunluk seçenekleriyle her ihtiyaca uygun çözüm sunar.</p>
+                <p class="section-header__eyebrow">{{ products_page.variants_eyebrow }}</p>
+                <h2 class="section-header__title">{{ products_page.variants_title }}<br><span class="text-accent">{{ products_page.variants_title_accent }}</span></h2>
+                <p class="section-header__desc">{{ products_page.variants_desc }}</p>
             </div>
 
             <div class="variants-grid">
@@ -97,9 +97,9 @@
                     <div class="variant-card__thickness">2.5<span> mm</span></div>
                     <p class="variant-card__weight">400 g/m² · 160 kg/m³</p>
                     <ul class="variant-card__specs">
-                        <li>Isıl İletkenlik <span>0.034 W/mK</span></li>
-                        <li>Çekme Dayanımı <span>520 N</span></li>
-                        <li>Hava Akış Direnci <span>104.6 kPa·s/m²</span></li>
+                        <li>{{ products_page.v_thermal }} <span>0.034 W/mK</span></li>
+                        <li>{{ products_page.v_tensile }} <span>520 N</span></li>
+                        <li>{{ products_page.v_airflow }} <span>104.6 kPa·s/m²</span></li>
                     </ul>
                 </div>
                 <!-- 5.5mm -->
@@ -107,9 +107,9 @@
                     <div class="variant-card__thickness">5.5<span> mm</span></div>
                     <p class="variant-card__weight">650 g/m² · 120 kg/m³</p>
                     <ul class="variant-card__specs">
-                        <li>Isıl İletkenlik <span>0.035 W/mK</span></li>
-                        <li>Çekme Dayanımı <span>400 N</span></li>
-                        <li>Hava Akış Direnci <span>88.9 kPa·s/m²</span></li>
+                        <li>{{ products_page.v_thermal }} <span>0.035 W/mK</span></li>
+                        <li>{{ products_page.v_tensile }} <span>400 N</span></li>
+                        <li>{{ products_page.v_airflow }} <span>88.9 kPa·s/m²</span></li>
                     </ul>
                 </div>
                 <!-- 7mm -->
@@ -117,9 +117,9 @@
                     <div class="variant-card__thickness">7<span> mm</span></div>
                     <p class="variant-card__weight">850 g/m² · 120 kg/m³</p>
                     <ul class="variant-card__specs">
-                        <li>Isıl İletkenlik <span>0.036 W/mK</span></li>
-                        <li>Çekme Dayanımı <span>900 N</span></li>
-                        <li>Hava Akış Direnci <span>87.3 kPa·s/m²</span></li>
+                        <li>{{ products_page.v_thermal }} <span>0.036 W/mK</span></li>
+                        <li>{{ products_page.v_tensile }} <span>900 N</span></li>
+                        <li>{{ products_page.v_airflow }} <span>87.3 kPa·s/m²</span></li>
                     </ul>
                 </div>
                 <!-- 9.5mm -->
@@ -127,9 +127,9 @@
                     <div class="variant-card__thickness">9.5<span> mm</span></div>
                     <p class="variant-card__weight">950 g/m² · 100 kg/m³</p>
                     <ul class="variant-card__specs">
-                        <li>Isıl İletkenlik <span>0.036 W/mK</span></li>
-                        <li>Çekme Dayanımı <span>950 N</span></li>
-                        <li>Hava Akış Direnci <span>94.8 kPa·s/m²</span></li>
+                        <li>{{ products_page.v_thermal }} <span>0.036 W/mK</span></li>
+                        <li>{{ products_page.v_tensile }} <span>950 N</span></li>
+                        <li>{{ products_page.v_airflow }} <span>94.8 kPa·s/m²</span></li>
                     </ul>
                 </div>
                 <!-- 11.5mm -->
@@ -137,9 +137,9 @@
                     <div class="variant-card__thickness">11.5<span> mm</span></div>
                     <p class="variant-card__weight">1000 g/m² · 87 kg/m³</p>
                     <ul class="variant-card__specs">
-                        <li>Isıl İletkenlik <span>0.039 W/mK</span></li>
-                        <li>Çekme Dayanımı <span>1000 N</span></li>
-                        <li>Hava Akış Direnci <span>100.6 kPa·s/m²</span></li>
+                        <li>{{ products_page.v_thermal }} <span>0.039 W/mK</span></li>
+                        <li>{{ products_page.v_tensile }} <span>1000 N</span></li>
+                        <li>{{ products_page.v_airflow }} <span>100.6 kPa·s/m²</span></li>
                     </ul>
                 </div>
             </div>
@@ -150,8 +150,8 @@
     <section class="app-areas" id="app-areas">
         <div class="container">
             <div class="section-header reveal-up">
-                <p class="section-header__eyebrow">Uygulama Alanları</p>
-                <h2 class="section-header__title">Her Alan İçin<br><span class="text-accent">Doğal Yalıtım</span></h2>
+                <p class="section-header__eyebrow">{{ products_page.areas_eyebrow }}</p>
+                <h2 class="section-header__title">{{ products_page.areas_title }}<br><span class="text-accent">{{ products_page.hero_title }}</span></h2>
             </div>
             <div class="app-areas-grid">
                 <!-- 1: Çatı -->
@@ -159,72 +159,72 @@
                     <div class="app-area-card__icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 12l9-8 9 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 10v10h14V10" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
                     </div>
-                    <h3 class="app-area-card__title">Çatı Yalıtımı</h3>
-                    <p class="app-area-card__desc">Çatı arası, mertek altı/arası, beton çatı üzeri ve teras uygulamalarında üstün ısı yalıtımı.</p>
-                    <div class="app-area-card__tags"><span class="app-area-card__tag">Çatı arası</span><span class="app-area-card__tag">Teras</span><span class="app-area-card__tag">Mertek arası</span></div>
+                    <h3 class="app-area-card__title">{{ products_page.areas.roof_title }}</h3>
+                    <p class="app-area-card__desc">{{ products_page.areas.roof_desc }}</p>
+                    <div class="app-area-card__tags"><span class="app-area-card__tag">{{ products_page.areas.roof_t1 }}</span><span class="app-area-card__tag">{{ products_page.areas.roof_t2 }}</span><span class="app-area-card__tag">{{ products_page.areas.roof_t3 }}</span></div>
                 </div>
                 <!-- 2: Duvar -->
                 <div class="app-area-card reveal-up" style="--delay:0.15s" id="area-wall">
                     <div class="app-area-card__icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="1" stroke="currentColor" stroke-width="2"/><line x1="3" y1="9" x2="21" y2="9" stroke="currentColor" stroke-width="1.5"/><line x1="3" y1="15" x2="21" y2="15" stroke="currentColor" stroke-width="1.5"/><line x1="9" y1="3" x2="9" y2="9" stroke="currentColor" stroke-width="1.5"/><line x1="15" y1="9" x2="15" y2="15" stroke="currentColor" stroke-width="1.5"/></svg>
                     </div>
-                    <h3 class="app-area-card__title">Duvar Yalıtımı</h3>
-                    <p class="app-area-card__desc">Dış cephe kaplama altı, iç cephe alçıpan arkası ve iki duvar arası uygulamalar.</p>
-                    <div class="app-area-card__tags"><span class="app-area-card__tag">Dış cephe</span><span class="app-area-card__tag">İç duvar</span><span class="app-area-card__tag">Alçıpan</span></div>
+                    <h3 class="app-area-card__title">{{ products_page.areas.wall_title }}</h3>
+                    <p class="app-area-card__desc">{{ products_page.areas.wall_desc }}</p>
+                    <div class="app-area-card__tags"><span class="app-area-card__tag">{{ products_page.areas.wall_t1 }}</span><span class="app-area-card__tag">{{ products_page.areas.wall_t2 }}</span><span class="app-area-card__tag">{{ products_page.areas.wall_t3 }}</span></div>
                 </div>
-                <!-- 3: Zemin & Tavan -->
+                <!-- 3: {{ products_page.areas.floor_title }} -->
                 <div class="app-area-card reveal-up" style="--delay:0.2s" id="area-floor">
                     <div class="app-area-card__icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="14" width="18" height="7" stroke="currentColor" stroke-width="2"/><path d="M3 14l3-4h12l3 4" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><line x1="9" y1="14" x2="9" y2="21" stroke="currentColor" stroke-width="1.5"/><line x1="15" y1="14" x2="15" y2="21" stroke="currentColor" stroke-width="1.5"/></svg>
                     </div>
-                    <h3 class="app-area-card__title">Zemin & Tavan</h3>
-                    <p class="app-area-card__desc">Şap altı, parke altı, yerden ısıtma sistemleri ve asma tavan uygulamaları.</p>
-                    <div class="app-area-card__tags"><span class="app-area-card__tag">Şap altı</span><span class="app-area-card__tag">Parke altı</span><span class="app-area-card__tag">Asma tavan</span></div>
+                    <h3 class="app-area-card__title">{{ products_page.areas.floor_title }}</h3>
+                    <p class="app-area-card__desc">{{ products_page.areas.floor_desc }}</p>
+                    <div class="app-area-card__tags"><span class="app-area-card__tag">{{ products_page.areas.floor_t1 }}</span><span class="app-area-card__tag">{{ products_page.areas.floor_t2 }}</span><span class="app-area-card__tag">{{ products_page.areas.floor_t3 }}</span></div>
                 </div>
                 <!-- 4: Akustik -->
                 <div class="app-area-card reveal-up" style="--delay:0.25s" id="area-acoustic">
                     <div class="app-area-card__icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3v18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M8 7v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 7v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M4 10v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M20 10v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
                     </div>
-                    <h3 class="app-area-card__title">Akustik Yalıtım</h3>
-                    <p class="app-area-card__desc">Ahşap çıtalı akustik panel sistemleri, stüdyo ve toplantı odaları için ses yutma çözümleri.</p>
-                    <div class="app-area-card__tags"><span class="app-area-card__tag">Akustik panel</span><span class="app-area-card__tag">Stüdyo</span><span class="app-area-card__tag">NRC 0.85</span></div>
+                    <h3 class="app-area-card__title">{{ products_page.areas.acoustic_title }}</h3>
+                    <p class="app-area-card__desc">{{ products_page.areas.acoustic_desc }}</p>
+                    <div class="app-area-card__tags"><span class="app-area-card__tag">{{ products_page.areas.acoustic_t1 }}</span><span class="app-area-card__tag">{{ products_page.areas.acoustic_t2 }}</span><span class="app-area-card__tag">{{ products_page.area_acoustic_t3 }}</span></div>
                 </div>
-                <!-- 5: Prefabrik & Konteynır -->
+                <!-- 5: {{ products_page.areas.prefab_title }} -->
                 <div class="app-area-card reveal-up" style="--delay:0.3s" id="area-prefab">
                     <div class="app-area-card__icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="2" y="8" width="20" height="12" rx="1" stroke="currentColor" stroke-width="2"/><path d="M2 8l4-4h12l4 4" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><line x1="8" y1="8" x2="8" y2="20" stroke="currentColor" stroke-width="1.5"/><line x1="16" y1="8" x2="16" y2="20" stroke="currentColor" stroke-width="1.5"/></svg>
                     </div>
-                    <h3 class="app-area-card__title">Prefabrik & Konteynır</h3>
-                    <p class="app-area-card__desc">Prefabrik yapılar, konteyner evler, çadır ve karavan yalıtımı için hafif ve esnek çözümler.</p>
-                    <div class="app-area-card__tags"><span class="app-area-card__tag">Prefabrik</span><span class="app-area-card__tag">Konteynır</span><span class="app-area-card__tag">Karavan</span></div>
+                    <h3 class="app-area-card__title">{{ products_page.areas.prefab_title }}</h3>
+                    <p class="app-area-card__desc">{{ products_page.areas.prefab_desc }}</p>
+                    <div class="app-area-card__tags"><span class="app-area-card__tag">{{ products_page.areas.prefab_t1 }}</span><span class="app-area-card__tag">{{ products_page.areas.prefab_t2 }}</span><span class="app-area-card__tag">{{ products_page.areas.prefab_t3 }}</span></div>
                 </div>
                 <!-- 6: Kamu Binaları -->
                 <div class="app-area-card reveal-up" style="--delay:0.35s" id="area-public">
                     <div class="app-area-card__icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7v2h20V7L12 2z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><line x1="4" y1="9" x2="4" y2="19" stroke="currentColor" stroke-width="2"/><line x1="8" y1="9" x2="8" y2="19" stroke="currentColor" stroke-width="2"/><line x1="16" y1="9" x2="16" y2="19" stroke="currentColor" stroke-width="2"/><line x1="20" y1="9" x2="20" y2="19" stroke="currentColor" stroke-width="2"/><rect x="2" y="19" width="20" height="3" stroke="currentColor" stroke-width="2"/></svg>
                     </div>
-                    <h3 class="app-area-card__title">Kamu & Sosyal Binalar</h3>
-                    <p class="app-area-card__desc">Hastane, okul, cami ve kültür merkezlerinde sağlıklı, kanserojen madde içermeyen yalıtım.</p>
-                    <div class="app-area-card__tags"><span class="app-area-card__tag">Hastane</span><span class="app-area-card__tag">Okul</span><span class="app-area-card__tag">Cami</span></div>
+                    <h3 class="app-area-card__title">{{ products_page.areas.public_title }}</h3>
+                    <p class="app-area-card__desc">{{ products_page.areas.public_desc }}</p>
+                    <div class="app-area-card__tags"><span class="app-area-card__tag">{{ products_page.areas.public_t1 }}</span><span class="app-area-card__tag">{{ products_page.areas.public_t2 }}</span><span class="app-area-card__tag">{{ products_page.areas.public_t3 }}</span></div>
                 </div>
                 <!-- 7: Denizcilik -->
                 <div class="app-area-card reveal-up" style="--delay:0.4s" id="area-marine">
                     <div class="app-area-card__icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M2 20c2-2 4-2 6 0s4 2 6 0 4-2 6 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 4v12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 4l6 8H6l6-8z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
                     </div>
-                    <h3 class="app-area-card__title">Denizcilik & Yat</h3>
-                    <p class="app-area-card__desc">Yat, tekne ve gemi yalıtımında nem dayanımı ve hafif yapısıyla ideal çözüm.</p>
-                    <div class="app-area-card__tags"><span class="app-area-card__tag">Yat</span><span class="app-area-card__tag">Tekne</span><span class="app-area-card__tag">Gemi</span></div>
+                    <h3 class="app-area-card__title">{{ products_page.areas.marine_title }}</h3>
+                    <p class="app-area-card__desc">{{ products_page.areas.marine_desc }}</p>
+                    <div class="app-area-card__tags"><span class="app-area-card__tag">{{ products_page.areas.marine_t1 }}</span><span class="app-area-card__tag">{{ products_page.areas.marine_t2 }}</span><span class="app-area-card__tag">{{ products_page.areas.marine_t3 }}</span></div>
                 </div>
-                <!-- 8: Beton Güçlendirme -->
+                <!-- 8: {{ products_page.areas.concrete_title }} -->
                 <div class="app-area-card reveal-up" style="--delay:0.45s" id="area-concrete">
                     <div class="app-area-card__icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="2" stroke="currentColor" stroke-width="2"/><path d="M4 12h16" stroke="currentColor" stroke-width="1.5"/><path d="M12 4v16" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="8" r="1" fill="currentColor" opacity="0.5"/><circle cx="16" cy="16" r="1" fill="currentColor" opacity="0.5"/></svg>
                     </div>
-                    <h3 class="app-area-card__title">Beton Güçlendirme</h3>
-                    <p class="app-area-card__desc">Harç ve beton karışımlarına %0.8–1.5 oranında katkı ile mekanik dayanımı artırma.</p>
-                    <div class="app-area-card__tags"><span class="app-area-card__tag">Harç katkısı</span><span class="app-area-card__tag">Beton lifi</span><span class="app-area-card__tag">Güçlendirme</span></div>
+                    <h3 class="app-area-card__title">{{ products_page.areas.concrete_title }}</h3>
+                    <p class="app-area-card__desc">{{ products_page.areas.concrete_desc }}</p>
+                    <div class="app-area-card__tags"><span class="app-area-card__tag">{{ products_page.areas.concrete_t1 }}</span><span class="app-area-card__tag">{{ products_page.areas.concrete_t2 }}</span><span class="app-area-card__tag">{{ products_page.areas.concrete_t3 }}</span></div>
                 </div>
             </div>
         </div>
@@ -234,9 +234,9 @@
     <section class="material-specs" id="material-specs">
         <div class="container">
             <div class="section-header reveal-up">
-                <p class="section-header__eyebrow">Malzeme Bilgisi</p>
-                <h2 class="section-header__title">Keçi Kılı + Polyester Lif<br><span class="text-accent">Karışım Teknolojisi</span></h2>
-                <p class="section-header__desc">Doğanın gücünü modern mühendislikle birleştiriyoruz.</p>
+                <p class="section-header__eyebrow">{{ products_page.specs_eyebrow }}</p>
+                <h2 class="section-header__title">{{ products_page.specs_title }}<br><span class="text-accent">{{ products_page.specs_title_accent }}</span></h2>
+                <p class="section-header__desc">{{ products_page.specs_desc }}</p>
             </div>
 
             <div class="specs-grid">
@@ -252,9 +252,9 @@
                         </svg>
                     </div>
                     <div class="spec-item__content">
-                        <h4 class="spec-item__title">Düşük Isı İletkenliği</h4>
+                        <h4 class="spec-item__title">{{ products_page.specs.thermal_t }}</h4>
                         <p class="spec-item__value">λ ≤ 0.035 W/(m·K)</p>
-                        <p class="spec-item__desc">Mükemmel termal yalıtım performansı</p>
+                        <p class="spec-item__desc">{{ products_page.specs.thermal_d }}</p>
                     </div>
                 </div>
 
@@ -266,9 +266,9 @@
                         </svg>
                     </div>
                     <div class="spec-item__content">
-                        <h4 class="spec-item__title">Yüksek Tutuşma Sıcaklığı</h4>
+                        <h4 class="spec-item__title">{{ products_page.specs.fire_t }}</h4>
                         <p class="spec-item__value">570°C+</p>
-                        <p class="spec-item__desc">Yangın güvenliği sınıfı A2</p>
+                        <p class="spec-item__desc">{{ products_page.specs.fire_d }}</p>
                     </div>
                 </div>
 
@@ -281,9 +281,9 @@
                         </svg>
                     </div>
                     <div class="spec-item__content">
-                        <h4 class="spec-item__title">İnce Yapı</h4>
-                        <p class="spec-item__value">%40 Daha İnce</p>
-                        <p class="spec-item__desc">Taş yününe göre yerden tasarruf</p>
+                        <h4 class="spec-item__title">{{ products_page.specs.thick_t }}</h4>
+                        <p class="spec-item__value">{{ products_page.specs.thick_v }}</p>
+                        <p class="spec-item__desc">{{ products_page.specs.thick_d }}</p>
                     </div>
                 </div>
 
@@ -296,9 +296,9 @@
                         </svg>
                     </div>
                     <div class="spec-item__content">
-                        <h4 class="spec-item__title">Nefes Alabilirlik</h4>
-                        <p class="spec-item__value">Pullu Keratin Yapı</p>
-                        <p class="spec-item__desc">Nem dengesini koruyarak ferahlık ve sağlıklı ortamlar sunar</p>
+                        <h4 class="spec-item__title">{{ products_page.specs.breathe_t }}</h4>
+                        <p class="spec-item__value">{{ products_page.specs.breathe_v }}</p>
+                        <p class="spec-item__desc">{{ products_page.specs.breathe_d }}</p>
                     </div>
                 </div>
 
@@ -309,9 +309,9 @@
                         </svg>
                     </div>
                     <div class="spec-item__content">
-                        <h4 class="spec-item__title">Akustik Ses Yutumu</h4>
+                        <h4 class="spec-item__title">{{ products_page.specs.acoust_t }}</h4>
                         <p class="spec-item__value">NRC ≥ 0.85</p>
-                        <p class="spec-item__desc">Liflerin gözenekli yapısıyla maksimum ses izolasyonu</p>
+                        <p class="spec-item__desc">{{ products_page.specs.acoust_d }}</p>
                     </div>
                 </div>
 
@@ -323,9 +323,9 @@
                         </svg>
                     </div>
                     <div class="spec-item__content">
-                        <h4 class="spec-item__title">Çevre Dostu</h4>
-                        <p class="spec-item__value">%100 Doğal</p>
-                        <p class="spec-item__desc">Geri dönüşümlü, düşük karbon ayak izi</p>
+                        <h4 class="spec-item__title">{{ products_page.specs.eco_t }}</h4>
+                        <p class="spec-item__value">{{ products_page.specs.eco_v }}</p>
+                        <p class="spec-item__desc">{{ products_page.specs.eco_d }}</p>
                     </div>
                 </div>
             </div>
@@ -337,23 +337,23 @@
         <div class="container">
             <div class="acoustic-science__inner">
                 <div class="acoustic-science__content reveal-up">
-                    <p class="section-eyebrow">Bilimsel Yaklaşım</p>
-                    <h2 class="section-title">Akustik Mükemmellik:<br><span class="text-accent">Pullu Keratin Yapı</span></h2>
+                    <p class="section-eyebrow">{{ products_page.science_eyebrow }}</p>
+                    <h2 class="section-title">{{ products_page.science_title }}<br><span class="text-accent">{{ products_page.specs.breathe_v }}</span></h2>
                     <p class="acoustic-science__desc">
-                        Keçi kılları, elektron mikroskobu altındaki görüntüsünde de görülebildiği üzere nispeten kalın lif çapı ve pullu dış yüzeye sahiptir. Bu özellik, ses dalgalarının keçi kılları arasında ilerlemesi esnasında yüksek direnç görmesine ve daha fazla enerji kaybına uğramasına neden olur. Diğer kesikli liflere göre daha belirgin ve geniş olan pullu keratin yapısı keçi kıllarının yüzey alanını arttırarak ses dalgalarının akış yolunu daha karmaşık hale getirir, akış direnci artar; bu da özellikle orta ve yüksek frekanslarda sesin daha fazla yutulmasına neden olur.
+                        {{ products_page.science_p1 }}
                     </p>
                     <p class="acoustic-science__desc" style="margin-top: 1rem;">
-                        Keçi kılı içerikli dokusuz yüzey panellerin akustik performansının temelini oluşturan bu yaklaşım, Marterm tarafından bilimsel temelleri esas alan Ar-Ge çalışmaları sonucu geliştirilmiş ve rakiplerine göre <strong>%60 daha performanslı</strong>, yanmaz, patentli bir ürün olarak kullanıma sunulmuştur.
+                        {{ products_page.science_p2 }}
                     </p>
                 </div>
                 <div class="acoustic-science__visual reveal-up" style="--delay: 0.2s">
                     <div class="infographic-card">
                         <div class="infographic-card__illus" style="padding: 0;">
-                            <img src="../assets/images/keci_kili_mikroskop.jpeg?v=2" alt="Keçi Kılı Elektron Mikroskobu Görüntüsü" style="width: 100%; height: auto; display: block; filter: none; opacity: 0.9; border-radius: 16px;">
+                            <img src="../assets/images/keci_kili_mikroskop.jpeg?v=2" alt="{{ products_page.science_img_alt }}" style="width: 100%; height: auto; display: block; filter: none; opacity: 0.9; border-radius: 16px;">
                         </div>
                         <div class="infographic-card__caption">
-                            <span>Pullu Keratin Yapı</span>
-                            <p>Elektron mikroskobu altında keçi kılının pullu dış yüzeyi</p>
+                            <span>{{ products_page.specs.breathe_v }}</span>
+                            <p>{{ products_page.science_caption_d }}</p>
                         </div>
                     </div>
                 </div>
@@ -365,59 +365,59 @@
     <section class="comparison" id="comparison-section">
         <div class="container">
             <div class="section-header reveal-up">
-                <p class="section-header__eyebrow">Laboratuvar Testleri</p>
-                <h2 class="section-header__title">Neden <span class="text-accent">Marterm</span> Keçesi?</h2>
-                <p class="section-header__desc">Gaziantep Üniversitesi akredite laboratuvarında yapılan karşılaştırma test sonuçları.</p>
+                <p class="section-header__eyebrow">{{ products_page.comp_eyebrow }}</p>
+                <h2 class="section-header__title">{{ products_page.comp_title }} <span class="text-accent">{{ products_page.comp_title_accent }}</span> {{ products_page.comp_title_after }}</h2>
+                <p class="section-header__desc">{{ products_page.comp_desc }}</p>
             </div>
 
             <div class="comparison-table reveal-up" style="--delay: 0.2s">
                 <div class="comparison-table__header">
-                    <div class="comparison-table__cell comparison-table__cell--label">Özellik</div>
-                    <div class="comparison-table__cell comparison-table__cell--highlight">Marterm Keçesi</div>
-                    <div class="comparison-table__cell">XPS Panel</div>
-                    <div class="comparison-table__cell">Taş Yünü</div>
+                    <div class="comparison-table__cell comparison-table__cell--label">{{ products_page.comp_th1 }}</div>
+                    <div class="comparison-table__cell comparison-table__cell--highlight">{{ products_page.comp_th2 }}</div>
+                    <div class="comparison-table__cell">{{ products_page.comp_th3 }}</div>
+                    <div class="comparison-table__cell">{{ products_page.comp_th4 }}</div>
                 </div>
 
                 <div class="comparison-table__row">
-                    <div class="comparison-table__cell comparison-table__cell--label">Isıl İletkenlik</div>
+                    <div class="comparison-table__cell comparison-table__cell--label">{{ products_page.comp_r1_l }}</div>
                     <div class="comparison-table__cell comparison-table__cell--highlight">0.035 W/mK</div>
                     <div class="comparison-table__cell">0.034 W/mK</div>
                     <div class="comparison-table__cell">0.041 W/mK</div>
                 </div>
 
                 <div class="comparison-table__row">
-                    <div class="comparison-table__cell comparison-table__cell--label">Isıl Direnç (m²K/W)</div>
+                    <div class="comparison-table__cell comparison-table__cell--label">{{ products_page.comp_r2_l }}</div>
                     <div class="comparison-table__cell comparison-table__cell--highlight">27.77</div>
                     <div class="comparison-table__cell">29.41</div>
                     <div class="comparison-table__cell">24.39</div>
                 </div>
 
                 <div class="comparison-table__row">
-                    <div class="comparison-table__cell comparison-table__cell--label">Nefes Alabilirlik (µ)</div>
+                    <div class="comparison-table__cell comparison-table__cell--label">{{ products_page.specs.breathe_t }} (µ)</div>
                     <div class="comparison-table__cell comparison-table__cell--highlight">µ = 1</div>
                     <div class="comparison-table__cell">µ = 80–250</div>
                     <div class="comparison-table__cell">µ = 1–2</div>
                 </div>
 
                 <div class="comparison-table__row">
-                    <div class="comparison-table__cell comparison-table__cell--label">Doğal İçerik</div>
-                    <div class="comparison-table__cell comparison-table__cell--highlight">%100 Doğal</div>
-                    <div class="comparison-table__cell">Petrol bazlı</div>
-                    <div class="comparison-table__cell">Kısmi</div>
+                    <div class="comparison-table__cell comparison-table__cell--label">{{ products_page.comp_r4_l }}</div>
+                    <div class="comparison-table__cell comparison-table__cell--highlight">{{ products_page.specs.eco_v }}</div>
+                    <div class="comparison-table__cell">{{ products_page.comp_r4_v2 }}</div>
+                    <div class="comparison-table__cell">{{ products_page.comp_r4_v3 }}</div>
                 </div>
 
                 <div class="comparison-table__row">
-                    <div class="comparison-table__cell comparison-table__cell--label">Biyolojik Bozunma</div>
-                    <div class="comparison-table__cell comparison-table__cell--highlight">%100</div>
-                    <div class="comparison-table__cell">Bozunmaz</div>
-                    <div class="comparison-table__cell">Bozunmaz</div>
+                    <div class="comparison-table__cell comparison-table__cell--label">{{ products_page.comp_r5_l }}</div>
+                    <div class="comparison-table__cell comparison-table__cell--highlight"{{ products_page.comp_r5_v1 }}</div>
+                    <div class="comparison-table__cell">{{ products_page.comp_r5_v2 }}</div>
+                    <div class="comparison-table__cell">{{ products_page.comp_r5_v2 }}</div>
                 </div>
 
                 <div class="comparison-table__row">
-                    <div class="comparison-table__cell comparison-table__cell--label">Kanserojen Madde</div>
-                    <div class="comparison-table__cell comparison-table__cell--highlight">İçermez</div>
-                    <div class="comparison-table__cell">İçerebilir</div>
-                    <div class="comparison-table__cell">İçerebilir</div>
+                    <div class="comparison-table__cell comparison-table__cell--label">{{ products_page.comp_r6_l }}</div>
+                    <div class="comparison-table__cell comparison-table__cell--highlight">{{ products_page.comp_r6_v1 }}</div>
+                    <div class="comparison-table__cell">{{ products_page.comp_r6_v2 }}</div>
+                    <div class="comparison-table__cell">{{ products_page.comp_r6_v2 }}</div>
                 </div>
             </div>
         </div>
@@ -427,8 +427,8 @@
     <section class="health-safety" id="health-safety">
         <div class="container">
             <div class="section-header reveal-up">
-                <p class="section-header__eyebrow">Sağlık & Güvenlik</p>
-                <h2 class="section-header__title">İnsan Sağlığına<br><span class="text-accent">Duyarlı Yalıtım</span></h2>
+                <p class="section-header__eyebrow">{{ products_page.health_eyebrow }}</p>
+                <h2 class="section-header__title">{{ products_page.health_title }}<br><span class="text-accent">{{ products_page.health_title_accent }}</span></h2>
             </div>
             <div class="health-grid">
                 <div class="health-item reveal-up" style="--delay:0.1s">
@@ -436,8 +436,8 @@
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2a8 8 0 100 16 8 8 0 000-16z" stroke="currentColor" stroke-width="1.5"/><path d="M6.5 10l2 2 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </div>
                     <div class="health-item__content">
-                        <h4>Kanserojen Madde İçermez</h4>
-                        <p>Hiçbir zararlı kimyasal veya kanserojen madde içermez.</p>
+                        <h4>{{ products_page.health.h1_t }}</h4>
+                        <p>{{ products_page.health.h1_d }}</p>
                     </div>
                 </div>
                 <div class="health-item reveal-up" style="--delay:0.15s">
@@ -445,8 +445,8 @@
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M7 13s1.5-2 3-2 3 2 3 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="7.5" cy="8" r="1" fill="currentColor"/><circle cx="12.5" cy="8" r="1" fill="currentColor"/></svg>
                     </div>
                     <div class="health-item__content">
-                        <h4>Hipoalerjenik</h4>
-                        <p>Alerji ve tahriş yapmaz, çocuk ve hassas ciltler için güvenli.</p>
+                        <h4>{{ products_page.health.h2_t }}</h4>
+                        <p>{{ products_page.health.h2_d }}</p>
                     </div>
                 </div>
                 <div class="health-item reveal-up" style="--delay:0.2s">
@@ -454,8 +454,8 @@
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2v16M6 6l4-4 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 14h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
                     </div>
                     <div class="health-item__content">
-                        <h4>Toz ve Parçacık Yaymaz</h4>
-                        <p>Uygulama sırasında maske veya eldiven gerektirmez.</p>
+                        <h4>{{ products_page.health.h3_t }}</h4>
+                        <p>{{ products_page.health.h3_d }}</p>
                     </div>
                 </div>
                 <div class="health-item reveal-up" style="--delay:0.25s">
@@ -463,8 +463,8 @@
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2l2.5 5h5.5l-4.5 3.5 1.5 5.5-5-3.5-5 3.5 1.5-5.5L2 10.5h5.5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
                     </div>
                     <div class="health-item__content">
-                        <h4>Koku & Çürüme Yapmaz</h4>
-                        <p>Doğal keratin yapısı bakteri ve mantar oluşumunu engeller.</p>
+                        <h4>{{ products_page.health.h4_t }}</h4>
+                        <p>{{ products_page.health.h4_d }}</p>
                     </div>
                 </div>
                 <div class="health-item reveal-up" style="--delay:0.3s">
@@ -472,8 +472,8 @@
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 10a5 5 0 0110 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M3 10a7 7 0 0114 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/><circle cx="10" cy="14" r="2" fill="currentColor"/></svg>
                     </div>
                     <div class="health-item__content">
-                        <h4>Nem Dengeleme</h4>
-                        <p>%15 higroskopik nem kapasitesi ile mekan nemini doğal olarak dengeler.</p>
+                        <h4>{{ products_page.health.h5_t }}</h4>
+                        <p>{{ products_page.health.h5_d }}</p>
                     </div>
                 </div>
                 <div class="health-item reveal-up" style="--delay:0.35s">
@@ -481,8 +481,8 @@
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2v4M10 14v4M18 10h-4M6 10H2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="10" cy="10" r="3" stroke="currentColor" stroke-width="1.5"/></svg>
                     </div>
                     <div class="health-item__content">
-                        <h4>Geniş Sıcaklık Aralığı</h4>
-                        <p>-40°C ile +120°C arası güvenle kullanılabilir.</p>
+                        <h4>{{ products_page.health.h6_t }}</h4>
+                        <p>{{ products_page.health.h6_d }}</p>
                     </div>
                 </div>
             </div>
@@ -493,11 +493,11 @@
     <section class="cta-section" id="products-cta">
         <div class="container">
             <div class="cta-section__inner reveal-up">
-                <h2 class="cta-section__title">Projenize Uygun<br><span class="text-accent">Yalıtım Çözümü</span> İçin</h2>
-                <p class="cta-section__desc">Uzman ekibimiz projeniz için en uygun ürün ve kalınlığı belirlemede yanınızda.</p>
+                <h2 class="cta-section__title">{{ products_page.cta_title }}<br><span class="text-accent">{{ products_page.cta_title_accent }}</span> {{ products_page.cta_title_after }}</h2>
+                <p class="cta-section__desc">{{ products_page.cta_desc }}</p>
                 <div class="cta-section__actions">
-                    <a href="/pages/iletisim.html" class="btn btn--primary btn--large" id="products-cta-contact">Teklif Alın</a>
-                    <a href="/pages/katalog.html" class="btn btn--ghost btn--large" id="products-cta-catalog">Katalog İndir</a>
+                    <a href="/pages/iletisim.html" class="btn btn--primary btn--large" id="products-cta-contact">{{ products_page.cta_btn_contact }}</a>
+                    <a href="/pages/katalog.html" class="btn btn--ghost btn--large" id="products-cta-catalog">{{ products_page.cta_btn_catalog }}</a>
                 </div>
             </div>
         </div>

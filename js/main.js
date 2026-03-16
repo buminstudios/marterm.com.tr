@@ -472,3 +472,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+
+/* ========================================================================= */
+/* NAVIGATION INTERCEPTOR FOR LOCALES
+/* ========================================================================= */
+document.addEventListener('DOMContentLoaded', () => {
+    const currLang = getCurrentLang();
+    if (currLang === defaultLang) return;
+
+    const links = document.querySelectorAll('a[href^="/"]');
+    links.forEach(link => {
+        let href = link.getAttribute('href');
+        if (href.startsWith('/' + currLang + '/') || href === '/' + currLang) return;
+        
+        let newHref = href === '/' ? '/' + currLang + '/' : '/' + currLang + href;
+        link.setAttribute('href', newHref);
+    });
+});
