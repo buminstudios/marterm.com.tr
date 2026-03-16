@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri — Marterm | Doğal Yalıtım Çözümleri</title>
+    <meta name="description" content="Marterm doğal yalıtım ürünlerinin uygulama görselleri, üretim süreçleri ve proje fotoğrafları.">
+    <meta name="keywords" content="Marterm galeri, yalıtım görselleri, keçi kılı yalıtım fotoğrafları, uygulama görselleri">
+    <meta property="og:title" content="Galeri — Marterm">
+    <meta property="og:description" content="Doğal yalıtım ürünlerimizin uygulama ve üretim görselleri.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://marterm.com.tr/pages/galeri.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/logolar/marterm_icon.png">
+    <link rel="apple-touch-icon" href="../assets/logolar/marterm_icon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        .gallery-item::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.4), transparent 50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+        .gallery-item:hover::after {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- ===== HEADER ===== -->
+    <header id="main-header" class="header">
+        <div class="header__inner">
+            <a href="/" class="header__logo" id="logo-link">
+                <img src="../assets/logolar/marterm_logo_beyaz.png" alt="Marterm Logo" class="header__logo-img">
+            </a>
+
+            <nav class="header__nav" id="main-nav">
+                <div class="header__nav-group">
+                    <a href="/" class="header__nav-link" id="nav-home">Anasayfa</a>
+                    <a href="/pages/urunler.html" class="header__nav-link" id="nav-products">Ürünler</a>
+                    <a href="/pages/hakkimizda.html" class="header__nav-link" id="nav-about">Hakkımızda</a>
+                    <a href="/pages/galeri.html" class="header__nav-link active" id="nav-gallery">Galeri</a>
+                    <a href="/pages/katalog.html" class="header__nav-link" id="nav-catalog">Katalog</a>
+                </div>
+                <a href="/pages/iletisim.html" class="header__nav-link header__nav-link--cta" id="nav-contact">İletişim</a>
+            </nav>
+
+            <button class="header__menu-btn" id="menu-toggle" aria-label="Menüyü aç">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ===== MOBILE MENU ===== -->
+    <div class="mobile-menu" id="mobile-menu">
+        <nav class="mobile-menu__nav">
+            <a href="/" class="mobile-menu__link">Anasayfa</a>
+            <a href="/pages/urunler.html" class="mobile-menu__link">Ürünler</a>
+            <a href="/pages/hakkimizda.html" class="mobile-menu__link">Hakkımızda</a>
+            <a href="/pages/galeri.html" class="mobile-menu__link active">Galeri</a>
+            <a href="/pages/katalog.html" class="mobile-menu__link">Katalog</a>
+            <a href="/pages/iletisim.html" class="mobile-menu__link">İletişim</a>
+        </nav>
+        <div class="mobile-menu__footer">
+            <p>+90 (533) 473 83 46</p>
+            <p>info@marterm.com.tr</p>
+        </div>
+    </div>
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero" id="gallery-hero">
+        <div class="page-hero__bg">
+            <div class="page-hero__gradient"></div>
+        </div>
+        <div class="container">
+            <div class="page-hero__content">
+                <p class="hero__eyebrow reveal-up">Görsel Dünya</p>
+                <h1 class="page-hero__title reveal-up">
+                    Ürünlerimiz ve<br><span class="text-accent">Uygulamalarımız</span>
+                </h1>
+                <p class="page-hero__desc reveal-up">Doğal yalıtım keçelerimizin üretim süreçleri, uygulama alanları ve proje detaylarını keşfedin.</p>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="gallery" id="gallery-grid" style="padding: 100px 0;">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <p class="section-header__eyebrow">Bizden Kareler</p>
+                <h2 class="section-header__title">Marterm <span class="text-accent">Galeri</span></h2>
+                <p class="section-header__desc">Üretim tesisimizden, uygulama alanlarından ve katıldığımız fuarlardan anlar.</p>
+            </div>
+            
+            <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 3rem;">
+
+                <div class="gallery-item reveal-up" style="--delay: 0s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/1.webp" alt="Marterm Galeri 1" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.1s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/2.webp" alt="Marterm Galeri 2" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.2s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/3.webp" alt="Marterm Galeri 3" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.30000000000000004s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/4.webp" alt="Marterm Galeri 4" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.4s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/5.webp" alt="Marterm Galeri 5" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/6.webp" alt="Marterm Galeri 6" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.1s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/7.webp" alt="Marterm Galeri 7" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.2s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/8.webp" alt="Marterm Galeri 8" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.30000000000000004s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/9.webp" alt="Marterm Galeri 9" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.4s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/10.webp" alt="Marterm Galeri 10" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/11.webp" alt="Marterm Galeri 11" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.1s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/12.webp" alt="Marterm Galeri 12" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.2s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/13.webp" alt="Marterm Galeri 13" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.30000000000000004s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/14.webp" alt="Marterm Galeri 14" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.4s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/15.webp" alt="Marterm Galeri 15" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/16.webp" alt="Marterm Galeri 16" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.1s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/17.webp" alt="Marterm Galeri 17" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.2s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/18.webp" alt="Marterm Galeri 18" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.30000000000000004s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/19.webp" alt="Marterm Galeri 19" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.4s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/20.webp" alt="Marterm Galeri 20" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/21.webp" alt="Marterm Galeri 21" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.1s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/22.webp" alt="Marterm Galeri 22" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.2s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/23.webp" alt="Marterm Galeri 23" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.30000000000000004s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/24.webp" alt="Marterm Galeri 24" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.4s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/25.webp" alt="Marterm Galeri 25" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/26.webp" alt="Marterm Galeri 26" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.1s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/27.webp" alt="Marterm Galeri 27" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.2s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/28.webp" alt="Marterm Galeri 28" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.30000000000000004s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/29.webp" alt="Marterm Galeri 29" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.4s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/30.webp" alt="Marterm Galeri 30" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/31.webp" alt="Marterm Galeri 31" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.1s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/32.webp" alt="Marterm Galeri 32" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.2s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/33.webp" alt="Marterm Galeri 33" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.30000000000000004s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/34.webp" alt="Marterm Galeri 34" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.4s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/35.webp" alt="Marterm Galeri 35" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/36.webp" alt="Marterm Galeri 36" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.1s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/37.webp" alt="Marterm Galeri 37" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.2s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/38.webp" alt="Marterm Galeri 38" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.30000000000000004s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/39.webp" alt="Marterm Galeri 39" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.4s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/40.webp" alt="Marterm Galeri 40" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/41.webp" alt="Marterm Galeri 41" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.1s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/42.webp" alt="Marterm Galeri 42" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.2s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/43.webp" alt="Marterm Galeri 43" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.30000000000000004s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/44.webp" alt="Marterm Galeri 44" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.4s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/45.webp" alt="Marterm Galeri 45" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/46.webp" alt="Marterm Galeri 46" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.1s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/47.webp" alt="Marterm Galeri 47" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.2s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/48.webp" alt="Marterm Galeri 48" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.30000000000000004s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/49.webp" alt="Marterm Galeri 49" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.4s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/50.webp" alt="Marterm Galeri 50" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/51.webp" alt="Marterm Galeri 51" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.1s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/52.webp" alt="Marterm Galeri 52" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.2s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/53.webp" alt="Marterm Galeri 53" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.30000000000000004s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/54.webp" alt="Marterm Galeri 54" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.4s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/55.webp" alt="Marterm Galeri 55" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/56.webp" alt="Marterm Galeri 56" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.1s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/57.webp" alt="Marterm Galeri 57" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.2s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/58.webp" alt="Marterm Galeri 58" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.30000000000000004s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/59.webp" alt="Marterm Galeri 59" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.4s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/60.webp" alt="Marterm Galeri 60" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/61.webp" alt="Marterm Galeri 61" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.1s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/62.webp" alt="Marterm Galeri 62" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.2s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/63.webp" alt="Marterm Galeri 63" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.30000000000000004s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/64.webp" alt="Marterm Galeri 64" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.4s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/65.webp" alt="Marterm Galeri 65" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/66.webp" alt="Marterm Galeri 66" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+                <div class="gallery-item reveal-up" style="--delay: 0.1s; border-radius: 12px; overflow: hidden; aspect-ratio: 1; position: relative;">
+                    <img src="../assets/images/galeri_webp/67.webp" alt="Marterm Galeri 67" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+<section class="cta-section" id="gallery-cta">
+        <div class="container">
+            <div class="cta-section__inner reveal-up">
+                <h2 class="cta-section__title">Projeleriniz İçin<br><span class="text-accent">Detaylı Görsel</span> İsteyin</h2>
+                <p class="cta-section__desc">Ürünlerimizin uygulanmış halini görmek veya özel proje görselleri talep etmek için bizimle iletişime geçin.</p>
+                <div class="cta-section__actions">
+                    <a href="/pages/iletisim.html" class="btn btn--primary btn--large" id="gallery-cta-contact">Bize Ulaşın</a>
+                    <a href="/pages/katalog.html" class="btn btn--ghost btn--large" id="gallery-cta-catalog">Kataloğu İndirin</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" id="main-footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <div class="footer__logo">
+                        <img src="../assets/logolar/marterm_logo_beyaz.png" alt="Marterm Logo" class="footer__logo-img">
+                    </div>
+                    <p class="footer__tagline">Doğal yalıtım çözümleri ile yeşil bir gelecek inşa ediyoruz.</p>
+                    <div class="footer__social">
+                        <a href="https://www.facebook.com/profile.php?id=100091669537890" target="_blank" rel="noopener" aria-label="Facebook" id="social-fb">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="https://twitter.com/martermofficial" target="_blank" rel="noopener" aria-label="Twitter" id="social-tw">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/company/martermofficial/about/" target="_blank" rel="noopener" aria-label="LinkedIn" id="social-li">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </a>
+                        <a href="https://www.instagram.com/marterm.official/" target="_blank" rel="noopener" aria-label="Instagram" id="social-ig">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer__links">
+                    <h4 class="footer__heading">Sayfalar</h4>
+                    <a href="/" class="footer__link">Anasayfa</a>
+                    <a href="/pages/urunler.html" class="footer__link">Ürünler</a>
+                    <a href="/pages/hakkimizda.html" class="footer__link">Hakkımızda</a>
+                    <a href="/pages/galeri.html" class="footer__link">Galeri</a>
+                    <a href="/pages/katalog.html" class="footer__link">Katalog</a>
+                </div>
+
+                <div class="footer__links">
+                    <h4 class="footer__heading">İletişim</h4>
+                    <a href="tel:+905334738346" class="footer__link">+90 (533) 473 83 46</a>
+                    <a href="mailto:info@marterm.com.tr" class="footer__link">info@marterm.com.tr</a>
+                    <p class="footer__link footer__link--static">Akif İnan Mah. 5007. Sk.<br>Sühakent Sitesi Altı B Blok No:8<br>Kahramanmaraş / Türkiye</p>
+                </div>
+
+                <div class="footer__links">
+                    <h4 class="footer__heading">Çalışma Saatleri</h4>
+                    <p class="footer__link footer__link--static">Pazartesi – Cuma<br>08:00 – 18:00</p>
+                    <p class="footer__link footer__link--static footer__link--muted">Cumartesi – Pazar<br>Kapalı</p>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p>&copy; 2026 Marterm. Tüm hakları saklıdır.</p>
+                <p>Design by <a href="https://buminstudios.com" target="_blank" rel="noopener">Bumin Studios</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script>
+        // Gallery Filter
+        const filterBtns = document.querySelectorAll('.gallery-filter__btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const filter = btn.dataset.filter;
+
+                galleryItems.forEach(item => {
+                    if (filter === 'all' || item.dataset.category === filter) {
+                        item.style.display = '';
+                        item.style.opacity = '0';
+                        requestAnimationFrame(() => {
+                            item.style.opacity = '1';
+                        });
+                    } else {
+                        item.style.opacity = '0';
+                        setTimeout(() => { item.style.display = 'none'; }, 300);
+                    }
+                });
+            });
+        });
+
+        // Lightbox
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxClose = document.getElementById('lightbox-close');
+
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const img = item.querySelector('img');
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
+        });
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    </script>
+</body>
+</html>

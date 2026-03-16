@@ -377,3 +377,98 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.opacity = '1';
     }
 });
+
+/* ========================================================================= */
+/* LANGUAGE SWITCHER LOGIC
+/* ========================================================================= */
+const defaultLang = 'tr';
+const supportedLangs = ['tr', 'en', 'es', 'ru', 'ar'];
+
+// Current path manipulation to find current lang
+function getCurrentLang() {
+    const path = window.location.pathname;
+    const parts = path.split('/').filter(Boolean);
+    
+    // e.g. /en/pages/urunler.html -> first part is 'en'
+    if (parts.length > 0 && supportedLangs.includes(parts[0])) {
+        return parts[0];
+    }
+    return defaultLang; // root is Turkish
+}
+
+function updateSwitcherUI() {
+    const btn = document.querySelector('.lang-btn');
+    if(!btn) return;
+    
+    const currLang = getCurrentLang();
+    const flags = {
+        'tr': 'tr.png',
+        'en': 'gb.png',
+        'es': 'es.png',
+        'ru': 'ru.png',
+        'ar': 'sa.png'
+    };
+    
+    const img = btn.querySelector('img');
+    const span = btn.querySelector('span');
+    
+    if(img && span) {
+        img.src = `https://flagcdn.com/24x18/${flags[currLang]}`;
+        span.textContent = currLang.toUpperCase();
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    updateSwitcherUI();
+    
+    const langBtn = document.querySelector('.lang-btn');
+    const langDropdown = document.querySelector('.lang-dropdown');
+    
+    if(langBtn && langDropdown) {
+        langBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            langDropdown.classList.toggle('active');
+        });
+        
+        // Close on click outside
+        document.addEventListener('click', (e) => {
+            if(!langBtn.contains(e.target) && !langDropdown.contains(e.target)) {
+                langDropdown.classList.remove('active');
+            }
+        });
+        
+        // Switch Logic
+        const options = document.querySelectorAll('.lang-option');
+        options.forEach(opt => {
+            opt.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetLang = opt.getAttribute('data-lang');
+                const currLang = getCurrentLang();
+                
+                if(targetLang === currLang) {
+                    langDropdown.classList.remove('active');
+                    return; // Same lang, no action
+                }
+                
+                let currentPath = window.location.pathname;
+                
+                // Remove existing lang prefix if it's there
+                if(currLang !== defaultLang) {
+                    // e.g. /en/pages/urunler.html -> /pages/urunler.html
+                    currentPath = currentPath.replace(`/${currLang}`, '');
+                }
+                // Handle edge case where it might just be /en or /en/
+                if(currentPath === '') currentPath = '/';
+                
+                // Add new prefix if target is not default (tr)
+                let newPath = currentPath;
+                if(targetLang !== defaultLang) {
+                    newPath = `/${targetLang}${currentPath}`;
+                }
+                
+                // Preserve query string and hash
+                window.location.href = newPath + window.location.search + window.location.hash;
+            });
+        });
+    }
+});
