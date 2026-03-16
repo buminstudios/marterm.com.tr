@@ -1,0 +1,19 @@
+{
+  "nav": {
+    "home": "Home",
+    "corporate": "Corporate",
+    "products": "Products",
+    "gallery": "Gallery",
+    "contact": "Contact",
+    "catalog": "E-Catalog"
+  },
+  "hero": {
+    "subtitle": "INSULATION TECHNOLOGY OF THE FUTURE",
+    "title": "Temperature is Under Control \n<span class=\"text-accent\">with Marterm</span>",
+    "desc": "We breathe life into buildings with new generation aerogel-based insulation solutions, bringing energy efficiency together with aesthetics. Build tomorrow today with our 100% eco-friendly and A1 class non-combustible materials.",
+    "cta_primary": "Discover Products",
+    "cta_secondary": "Contact Us",
+    "stats_energy": "<span>Up to 45%</span> Energy Saving",
+    "stats_class": "A1 Class Fireproof"
+  }
+}

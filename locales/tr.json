@@ -1,0 +1,19 @@
+{
+  "nav": {
+    "home": "Anasayfa",
+    "corporate": "Kurumsal",
+    "products": "Ürünler",
+    "gallery": "Galeri",
+    "contact": "İletişim",
+    "catalog": "E-Katalog"
+  },
+  "hero": {
+    "subtitle": "GELECEĞİN YALITIM TEKNOLOJİSİ",
+    "title": "Marterm ile \n<span class=\"text-accent\">Sıcaklık Kontrol Altında</span>",
+    "desc": "Yeni nesil aerogel tabanlı yalıtım çözümleriyle binalara nefes aldırıyor, enerji verimliliğini estetikle buluşturuyoruz. %100 çevre dostu ve A1 sınıfı yanmaz malzemelerimizle yarınları bugünden inşa edin.",
+    "cta_primary": "Ürünleri Keşfet",
+    "cta_secondary": "Bize Ulaşın",
+    "stats_energy": "<span>%45'e varan</span> Enerji Tasarrufu",
+    "stats_class": "A1 Sınıfı Yanmazlık"
+  }
+}
