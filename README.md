@@ -17,3 +17,25 @@ npm run build
 ```
 
 Then serve using any static http server.
+
+## i18n Workflow
+`tr.json` is the source of truth. New copy should be added to the locale files first, then referenced from templates with `{{ ... }}` or `{{{ ... }}}`. Avoid hardcoding user-facing text directly into `src/**/*.html`.
+
+Useful commands:
+```bash
+npm run i18n:report
+npm run i18n:baseline
+OPENAI_API_KEY=... npm run i18n:sync
+npm run build
+```
+
+What each command does:
+- `npm run i18n:report`: checks missing translations, stale translations, and hardcoded template text.
+- `npm run i18n:baseline`: marks the current translations as the accepted baseline in `locales/.translation-meta.json`.
+- `npm run i18n:sync`: fills only missing or stale keys by translating from Turkish with the OpenAI Responses API.
+- `npm run build`: generates the static site for `tr`, `en`, `es`, `ru`, and `ar`.
+
+Notes:
+- Arabic pages are built with `dir="rtl"` automatically.
+- If you manually edit existing translations after a content pass, run `npm run i18n:baseline` once so the new state becomes the reference point.
+- If you add a new page or section, first add the Turkish keys to `locales/tr.json`, wire them in the template, run `npm run i18n:report`, then `npm run i18n:sync`, and finally `npm run build`.

@@ -12,8 +12,8 @@
     <meta property="og:url" content="https://marterm.com.tr/pages/iletisim.html">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="../assets/logolar/marterm_icon.png">
-    <link rel="apple-touch-icon" href="../assets/logolar/marterm_icon.png">
+    <link rel="icon" type="image/png" href="/assets/logolar/marterm_icon.png">
+    <link rel="apple-touch-icon" href="/assets/logolar/marterm_icon.png">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,28 +21,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <!-- ===== HEADER ===== -->
     <header id="main-header" class="header">
         <div class="header__inner">
             <a href="/" class="header__logo" id="logo-link">
-                <img src="../assets/logolar/marterm_logo_beyaz.png" alt="Marterm Logo" class="header__logo-img">
+                <img src="/assets/logolar/marterm_logo_beyaz.png" alt="Marterm Logo" class="header__logo-img">
             </a>
 
             <nav class="header__nav" id="main-nav">
                 <div class="header__nav-group">
                     <a href="/" class="header__nav-link" id="nav-home">{{ common.nav_home }}</a>
                     <a href="/pages/urunler.html" class="header__nav-link" id="nav-products">{{ common.nav_products }}</a>
-                    <a href="/pages/hakkimizda.html" class="header__nav-link" id="nav-about">Hakkımızda</a>
+                    <a href="/pages/hakkimizda.html" class="header__nav-link" id="nav-about">{{ common.nav_about }}</a>
                     <a href="/pages/galeri.html" class="header__nav-link" id="nav-gallery">{{ common.nav_gallery }}</a>
-                    <a href="/pages/katalog.html" class="header__nav-link" id="nav-catalog">Katalog</a>
+                    <a href="/pages/katalog.html" class="header__nav-link" id="nav-catalog">{{ common.nav_catalog }}</a>
                 </div>
-                <a href="/pages/iletisim.html" class="header__nav-link header__nav-link--cta active" id="nav-contact">{{ contact_page.hero_eyebrow }}</a>
+                <a href="/pages/iletisim.html" class="header__nav-link header__nav-link--cta active" id="nav-contact">{{ common.nav_contact }}</a>
             </nav>
 
-            <button class="header__menu-btn" id="menu-toggle" aria-label="Menüyü aç">
+            <button class="header__menu-btn" id="menu-toggle" aria-label="{{ common.menu_label }}">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -55,10 +55,10 @@
         <nav class="mobile-menu__nav">
             <a href="/" class="mobile-menu__link">{{ common.nav_home }}</a>
             <a href="/pages/urunler.html" class="mobile-menu__link">{{ common.nav_products }}</a>
-            <a href="/pages/hakkimizda.html" class="mobile-menu__link">Hakkımızda</a>
+            <a href="/pages/hakkimizda.html" class="mobile-menu__link">{{ common.nav_about }}</a>
             <a href="/pages/galeri.html" class="mobile-menu__link">{{ common.nav_gallery }}</a>
-            <a href="/pages/katalog.html" class="mobile-menu__link">Katalog</a>
-            <a href="/pages/iletisim.html" class="mobile-menu__link active">{{ contact_page.hero_eyebrow }}</a>
+            <a href="/pages/katalog.html" class="mobile-menu__link">{{ common.nav_catalog }}</a>
+            <a href="/pages/iletisim.html" class="mobile-menu__link active">{{ common.nav_contact }}</a>
         </nav>
         <div class="mobile-menu__footer">
             <p>{{ contact_page.phone_val }}</p>
@@ -75,7 +75,7 @@
             <div class="page-hero__content">
                 <p class="hero__eyebrow reveal-up">{{ contact_page.hero_eyebrow }}</p>
                 <h1 class="page-hero__title reveal-up">
-                    Bizimle<br><span class="text-accent">{{ contact_page.hero_eyebrow }}e Geçin</span>
+                    {{ contact_page.hero_title }}<br><span class="text-accent">{{ contact_page.hero_title_accent }}</span>
                 </h1>
                 <p class="page-hero__desc reveal-up">{{ contact_page.hero_desc }}</p>
             </div>
@@ -223,9 +223,9 @@
             <div class="footer__grid">
                 <div class="footer__brand">
                     <div class="footer__logo">
-                        <img src="../assets/logolar/marterm_logo_beyaz.png" alt="Marterm Logo" class="footer__logo-img">
+                        <img src="/assets/logolar/marterm_logo_beyaz.png" alt="Marterm Logo" class="footer__logo-img">
                     </div>
-                    <p class="footer__tagline">Doğal yalıtım çözümleri ile yeşil bir gelecek inşa ediyoruz.</p>
+                    <p class="footer__tagline">{{ common.footer_tagline }}</p>
                     <div class="footer__social">
                         <a href="https://www.facebook.com/profile.php?id=100091669537890" target="_blank" rel="noopener" aria-label="Facebook" id="social-fb">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
@@ -243,37 +243,37 @@
                 </div>
 
                 <div class="footer__links">
-                    <h4 class="footer__heading">Sayfalar</h4>
+                    <h4 class="footer__heading">{{ common.footer_pages_heading }}</h4>
                     <a href="/" class="footer__link">{{ common.nav_home }}</a>
                     <a href="/pages/urunler.html" class="footer__link">{{ common.nav_products }}</a>
-                    <a href="/pages/hakkimizda.html" class="footer__link">Hakkımızda</a>
+                    <a href="/pages/hakkimizda.html" class="footer__link">{{ common.nav_about }}</a>
                     <a href="/pages/galeri.html" class="footer__link">{{ common.nav_gallery }}</a>
-                    <a href="/pages/katalog.html" class="footer__link">Katalog</a>
+                    <a href="/pages/katalog.html" class="footer__link">{{ common.nav_catalog }}</a>
                 </div>
 
                 <div class="footer__links">
-                    <h4 class="footer__heading">{{ contact_page.hero_eyebrow }}</h4>
+                    <h4 class="footer__heading">{{ common.nav_contact }}</h4>
                     <a href="tel:+905334738346" class="footer__link">{{ contact_page.phone_val }}</a>
                     <a href="mailto:info@marterm.com.tr" class="footer__link">{{ contact_page.email_val }}</a>
                     <p class="footer__link footer__link--static">Akif İnan Mah. 5007. Sk.<br>Sühakent Sitesi Altı B Blok No:8<br>Kahramanmaraş / Türkiye</p>
                 </div>
 
                 <div class="footer__links">
-                    <h4 class="footer__heading">Çalışma Saatleri</h4>
-                    <p class="footer__link footer__link--static">Pazartesi – Cuma<br>08:00 – 18:00</p>
-                    <p class="footer__link footer__link--static footer__link--muted">Cumartesi – Pazar<br>Kapalı</p>
+                    <h4 class="footer__heading">{{ common.footer_hours_heading }}</h4>
+                    <p class="footer__link footer__link--static">{{{ common.footer_hours_weekdays }}}</p>
+                    <p class="footer__link footer__link--static footer__link--muted">{{{ common.footer_hours_weekend }}}</p>
                 </div>
             </div>
 
             <div class="footer__bottom">
-                <p>&copy; 2026 Marterm. Tüm hakları saklıdır.</p>
+                <p>&copy; 2026 Marterm. {{ common.footer_rights }}</p>
                 <p>Design by <a href="https://buminstudios.com" target="_blank" rel="noopener">Bumin Studios</a></p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="../js/main.js"></script>
+    <script src="/js/main.js"></script>
     <script>
         function handleSubmit(e) {
             e.preventDefault();

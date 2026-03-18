@@ -7,6 +7,7 @@ const BUILD_DIR = __dirname; // root
 
 // Desteklenen diller
 const languages = ['tr', 'en', 'es', 'ru', 'ar'];
+const RTL_LANGUAGES = new Set(['ar']);
 
 // JSON baglantilari
 const translations = {};
@@ -37,8 +38,62 @@ function getNestedValue(obj, objPath) {
     return objPath.split('.').reduce((acc, part) => acc && acc[part], obj);
 }
 
+function extractTemplateKeys(content) {
+    const keys = new Set();
+    const keyRegex = /\{\{\{?\s*([\w.]+)\s*\}\}\}?/g;
+
+    for (const match of content.matchAll(keyRegex)) {
+        keys.add(match[1]);
+    }
+
+    return keys;
+}
+
+function validateSourceLocale(htmlFiles) {
+    const missing = [];
+
+    for (const srcFile of htmlFiles) {
+        const content = fs.readFileSync(srcFile, 'utf-8');
+        for (const key of extractTemplateKeys(content)) {
+            if (getNestedValue(translations.tr, key) === undefined) {
+                missing.push({
+                    file: path.relative(__dirname, srcFile),
+                    key
+                });
+            }
+        }
+    }
+
+    if (!missing.length) return;
+
+    console.error('Build failed: source templates reference keys missing from locales/tr.json');
+    for (const item of missing.slice(0, 60)) {
+        console.error(`  - ${item.file}: ${item.key}`);
+    }
+    if (missing.length > 60) {
+        console.error(`  ... ${missing.length - 60} more`);
+    }
+    process.exit(1);
+}
+
+function prefixLocalizedLinks(content, lang) {
+    if (lang === 'tr') return content;
+
+    return content.replace(/href="(\/[^"]*)"/g, (match, href) => {
+        if (
+            href === '/' ||
+            /^\/pages\/.+\.html(?:[?#].*)?$/i.test(href)
+        ) {
+            const prefixed = href === '/' ? `/${lang}/` : `/${lang}${href}`;
+            return `href="${prefixed}"`;
+        }
+        return match;
+    });
+}
+
 function build() {
     const htmlFiles = getHtmlFiles(SRC_DIR);
+    validateSourceLocale(htmlFiles);
 
     languages.forEach(lang => {
         console.log(`Building for ${lang}...`);
@@ -62,14 +117,16 @@ function build() {
             content = content.replace(/\{\{\{\s*([\w.]+)\s*\}\}\}/g, (match, key) => {
                 const trVal = getNestedValue(translations[lang], key);
                 const fallbackVal = getNestedValue(translations['tr'], key);
-                return (trVal !== undefined ? trVal : fallbackVal) || key; 
+                const val = trVal !== undefined ? trVal : fallbackVal;
+                return val !== undefined && val !== null ? String(val) : key;
             });
 
             // 2. Double brace replaced securely (Plain Text) -> {{ hero.subtitle }}
             content = content.replace(/\{\{\s*([\w.]+)\s*\}\}/g, (match, key) => {
                 const trVal = getNestedValue(translations[lang], key);
                 const fallbackVal = getNestedValue(translations['tr'], key);
-                let res = (trVal !== undefined ? trVal : fallbackVal) || key;
+                let res = trVal !== undefined ? trVal : fallbackVal;
+                if (res === undefined || res === null) res = key;
                 if(typeof res === 'string') {
                     res = res.replace(/</g, '&lt;').replace(/>/g, '&gt;');
                 }
@@ -78,8 +135,20 @@ function build() {
 
             // 3. Update HTML lang tag
             content = content.replace(/<html[^>]*lang="[^"]*"[^>]*>/i, match => {
-                 return match.replace(/lang="[^"]*"/, `lang="${lang}"`);
+                let next = match.replace(/lang="[^"]*"/, `lang="${lang}"`);
+                if (RTL_LANGUAGES.has(lang)) {
+                    if (/dir="[^"]*"/i.test(next)) {
+                        next = next.replace(/dir="[^"]*"/i, 'dir="rtl"');
+                    } else {
+                        next = next.replace('<html', '<html dir="rtl"');
+                    }
+                } else {
+                    next = next.replace(/\sdir="[^"]*"/i, '');
+                }
+                return next;
             });
+
+            content = prefixLocalizedLinks(content, lang);
 
             // 4. Update relative link paths in the subfolders.
             // If the output is in /en/ and the link was `href="pages/urunler.html"`, we don't need to change it because

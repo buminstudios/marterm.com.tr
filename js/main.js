@@ -6,21 +6,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     // ============================
-    // 1. HEADER — Scroll behavior
-    // ============================
-    const header = document.getElementById('main-header');
-    let lastScroll = 0;
-
-    function handleHeaderScroll() {
-        const scrollY = window.scrollY;
-
-        // Scroll darkening logic removed
-
-        lastScroll = scrollY;
-    }
-
-    // ============================
-    // 2. MOBILE MENU
+    // 1. MOBILE MENU
     // ============================
     const menuToggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -75,10 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
             this.resizeCanvas();
             window.addEventListener('resize', () => this.resizeCanvas());
             this.preloadFrames();
-            
-            window.addEventListener('scroll', () => {
-                requestAnimationFrame(() => this.handleScroll());
-            });
         }
 
         resizeCanvas() {
@@ -319,36 +301,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ============================
-    // 6. SMOOTH PARALLAX on mouse (subtle) — for hero content
-    // ============================
-    let mouseX = 0;
-    let mouseY = 0;
-
-    document.addEventListener('mousemove', (e) => {
-        mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
-        mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
-    });
-
-    function updateParallax() {
-        if (typeof heroContent !== 'undefined' && heroContent && !heroContent.classList.contains('fade-out')) {
-            const translateX = mouseX * 8;
-            const translateY = mouseY * 5;
-            heroContent.style.transform = `translate(${translateX}px, ${translateY}px)`;
-        }
-        requestAnimationFrame(updateParallax);
-    }
-
-    updateParallax();
-
-    // ============================
-    // 7. MAIN SCROLL HANDLER
+    // 6. MAIN SCROLL HANDLER
     // ============================
     let ticking = false;
 
     function onScroll() {
         if (!ticking) {
             requestAnimationFrame(() => {
-                handleHeaderScroll();
                 if (typeof continuousHero !== 'undefined' && continuousHero) continuousHero.handleScroll();
                 ticking = false;
             });
@@ -359,7 +318,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', onScroll, { passive: true });
 
     // Initial call
-    handleHeaderScroll();
     if (typeof continuousHero !== 'undefined' && continuousHero) continuousHero.handleScroll();
 
     // ============================
@@ -488,5 +446,51 @@ document.addEventListener('DOMContentLoaded', () => {
         
         let newHref = href === '/' ? '/' + currLang + '/' : '/' + currLang + href;
         link.setAttribute('href', newHref);
+    });
+});
+
+/* ========================================================================= */
+/* THEME TOGGLE LOGIC
+/* ========================================================================= */
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggles = document.querySelectorAll('.theme-toggle');
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+
+    // To prevent flash of incorrect theme, we can set light mode early in <head> but parsing it here is fine for now
+    if (currentTheme === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+    }
+
+    function updateIcons(theme) {
+        themeToggles.forEach(btn => {
+            const sunIcon = btn.querySelector('.sun-icon');
+            const moonIcon = btn.querySelector('.moon-icon');
+            if (sunIcon && moonIcon) {
+                if (theme === 'light') {
+                    sunIcon.style.display = 'none';
+                    moonIcon.style.display = 'block';
+                } else {
+                    sunIcon.style.display = 'block';
+                    moonIcon.style.display = 'none';
+                }
+            }
+        });
+    }
+
+    updateIcons(currentTheme);
+
+    themeToggles.forEach(btn => {
+        btn.addEventListener('click', () => {
+            let theme = document.documentElement.getAttribute('data-theme');
+            if (theme === 'light') {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'dark');
+                updateIcons('dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+                updateIcons('light');
+            }
+        });
     });
 });
