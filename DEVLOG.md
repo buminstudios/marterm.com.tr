@@ -164,6 +164,28 @@
 
 **Durum:** İlgili HTML dosyaları ve `locales/*.json` çevirileri tamamlandı. `node build.js` ile tüm diller başarıyla derlendi. İşlemler sorunsuz ve yayına hazır.
 
+## 📅 [18 Mart 2026] - Oturum 6: i18n Tamamlama, HTML Syntax Düzeltme & GitHub Senkronizasyonu
+
+**Yapılan Değişiklikler:**
+
+- ✅ **`locales/tr.json` — `home_page.*` bölümü eklendi:** Ana sayfa (`src/index.html`) tamamen locale key'e bağlandı. 7 hero sekansı (`s1_*`–`s7_*`), özellikler, showcase istatistikleri, değerler ve CTA bölümleri için tüm Türkçe içerikler `home_page.*` anahtarları altında tanımlandı.
+- ✅ **`locales/en.json` — Sıfır eksik key:** `home_page.*`, `common.menu_label`, `footer_tagline`, `footer_pages_heading`, `footer_hours_*`, `products_page.areas.*`, `products_page.specs.*`, `products_page.health.*`, `about_page` yeni bölümleri, `gallery_page`, `catalog_page`, `contact_page` eksik anahtarları İngilizce çevirilerle tamamlandı (310 key eklendi).
+- ✅ **`locales/es.json`, `ru.json`, `ar.json` — Yapısal senkronizasyon:** Tüm eksik anahtarlar EN çevirileri placeholder olarak kopyalandı; build artık TR'ye fallback etmiyor, her dil eksiksiz yapıya sahip.
+- 🐛 **`src/pages/urunler.html:411` — HTML syntax hatası düzeltildi:** Karşılaştırma tablosunda `class="..."{{ key }}` yapısı `class="...">{{ key }}` olarak düzeltildi (kaçan `>`).
+- 🐛 **`src/pages/iletisim.html` — Hero başlığı düzeltildi:** `Bizimle<br>{{ contact_page.hero_eyebrow }}e Geçin` ifadesi `{{ contact_page.hero_title }}<br>{{ contact_page.hero_title_accent }}` şeklinde temiz locale key'e bağlandı.
+- ✅ **GitHub senkronizasyonu:** `origin/main` ile karşılaştırıldı; local versiyon 2 commit daha ilerideydi ve daha gelişmiş yapıya sahipti. Tüm değişiklikler push edildi (`c029af7` → `cf2a2a8`).
+
+**Build Durumu:**
+- ✅ `node build.js` başarılı — TR/EN/ES/RU/AR
+- ✅ Tüm dillerde key leak yok
+- ✅ `en: 0 missing`, `es: 0 missing`, `ru: 0 missing`, `ar: 0 missing`
+
+**Notlar / Sonraki Oturum İçin:**
+- ES/RU/AR dilleri için gerçek çeviriler hâlâ EN placeholder — özellikle AR için Arapça çeviri öncelikli.
+- Lokal preview sunucusu: `npx serve . -p 3434` (proje kök dizininde)
+
+---
+
 ## 15 Şubat 2026
 
 **News & Catalog PDF Fixesi Yeniden Uygulandı**
