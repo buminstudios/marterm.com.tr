@@ -32,8 +32,8 @@
         "var_specs_tensile": "Tensile Strength",
         "var_specs_airflow": "Airflow Resistance",
         "areas_eyebrow": "Application Areas",
-        "areas_title": "Natural Insulation,",
-        "areas_title_accent": "Natural Insulation",
+        "areas_title": "في كل مبنى",
+        "areas_title_accent": "عزل طبيعي",
         "area_roof": "Roof Insulation",
         "area_roof_desc": "Superior thermal insulation for attics, under/between rafters, on concrete roofs, and terrace applications.",
         "area_roof_t1": "Attic",
@@ -238,7 +238,8 @@
         "comp_r6_v2": "May contain",
         "cta_title_after": "",
         "v_sound": "امتصاص الصوت",
-        "v_res": "المقاومة الحرارية"
+        "v_res": "المقاومة الحرارية",
+        "areas_desc": "حلول عزل طبيعية مطورة بتقنية شعر الماعز للفلل، والشقق، والمباني الصناعية. عزل حراري تحت السجاد للأرضيات. كما يمكن استخدامه في الكرفانات والسيارات وقطاع المركبات."
     },
     "about_page": {
         "title": "About Us — Marterm | Insulating the Future",

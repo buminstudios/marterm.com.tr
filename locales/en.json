@@ -32,7 +32,7 @@
         "var_specs_tensile": "Tensile Strength",
         "var_specs_airflow": "Airflow Resistance",
         "areas_eyebrow": "Application Areas",
-        "areas_title": "Natural Insulation,",
+        "areas_title": "In Every Structure",
         "areas_title_accent": "Natural Insulation",
         "area_roof": "Roof Insulation",
         "area_roof_desc": "Superior thermal insulation for attics, under/between rafters, on concrete roofs, and terrace applications.",
@@ -238,7 +238,8 @@
         "comp_r6_v2": "May contain",
         "cta_title_after": "",
         "v_sound": "Avg. Sound Absorp.",
-        "v_res": "Thermal Resistance"
+        "v_res": "Thermal Resistance",
+        "areas_desc": "Natural insulation solutions developed with goat hair technology for villas, apartments, industrial buildings, and special applications. Under-carpet thermal insulation for floors. It can also be used in caravans, vehicles, and the automotive sector."
     },
     "about_page": {
         "title": "About Us — Marterm | Insulating the Future",

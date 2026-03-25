@@ -32,8 +32,8 @@
         "var_specs_tensile": "Tensile Strength",
         "var_specs_airflow": "Airflow Resistance",
         "areas_eyebrow": "Application Areas",
-        "areas_title": "Natural Insulation,",
-        "areas_title_accent": "Natural Insulation",
+        "areas_title": "En Cada Estructura",
+        "areas_title_accent": "Aislamiento Natural",
         "area_roof": "Roof Insulation",
         "area_roof_desc": "Superior thermal insulation for attics, under/between rafters, on concrete roofs, and terrace applications.",
         "area_roof_t1": "Attic",
@@ -238,7 +238,8 @@
         "comp_r6_v2": "May contain",
         "cta_title_after": "",
         "v_sound": "Absorción Acúst.",
-        "v_res": "Resistencia Tér."
+        "v_res": "Resistencia Tér.",
+        "areas_desc": "Soluciones de aislamiento natural desarrolladas con tecnología de pelo de cabra para villas, apartamentos, edificios industriales y áreas especiales. Aislamiento térmico bajo alfombra para pisos. También se puede utilizar en caravanas, vehículos y el sector de la automoción."
     },
     "about_page": {
         "title": "About Us — Marterm | Insulating the Future",

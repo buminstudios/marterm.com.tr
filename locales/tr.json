@@ -35,7 +35,7 @@
         "var_specs_tensile": "Çekme Dayanımı",
         "var_specs_airflow": "Hava Akış Direnci",
         "areas_eyebrow": "Uygulama Alanları",
-        "areas_title": "Doğal Yalıtım,",
+        "areas_title": "Her Yapıda",
         "areas_title_accent": "Doğal Yalıtım",
         "areas": {
             "roof_title": "Çatı Yalıtımı",
@@ -238,7 +238,8 @@
         "cta_btn_contact": "Teklif Alın",
         "cta_btn_catalog": "Katalog İndir",
         "v_sound": "Ort. Ses Yutumu",
-        "v_res": "Isıl Direnç"
+        "v_res": "Isıl Direnç",
+        "areas_desc": "Villa, apartman, endüstriyel yapı ve özel uygulama alanlarında, keçi kılı teknolojisiyle geliştirilen doğal yalıtım çözümleri. Zemin yalıtımlarına halı altı ısı yalıtım altı. Aynı zamanda karavanlarda, araçlarda otomotiv sektöründe de kullanılabilir."
     },
     "about_page": {
         "title": "Hakkımızda — Marterm | Geleceği Yalıtıyoruz",

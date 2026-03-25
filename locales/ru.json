@@ -32,8 +32,8 @@
         "var_specs_tensile": "Tensile Strength",
         "var_specs_airflow": "Airflow Resistance",
         "areas_eyebrow": "Application Areas",
-        "areas_title": "Natural Insulation,",
-        "areas_title_accent": "Natural Insulation",
+        "areas_title": "В Каждом Здании",
+        "areas_title_accent": "Естественная Изоляция",
         "area_roof": "Roof Insulation",
         "area_roof_desc": "Superior thermal insulation for attics, under/between rafters, on concrete roofs, and terrace applications.",
         "area_roof_t1": "Attic",
@@ -238,7 +238,8 @@
         "comp_r6_v2": "May contain",
         "cta_title_after": "",
         "v_sound": "Звукопоглощение",
-        "v_res": "Теплосопротивление"
+        "v_res": "Теплосопротивление",
+        "areas_desc": "Естественные решения для изоляции, разработанные с использованием технологии козьей шерсти для вилл, квартир, промышленных зданий и специальных областей. Теплоизоляция под ковром для полов. Также может использоваться в автофургонах, транспортных средствах и автомобильном секторе."
     },
     "about_page": {
         "title": "About Us — Marterm | Insulating the Future",
