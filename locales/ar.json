@@ -167,10 +167,10 @@
             "acoustic_t1": "Acoustic panel",
             "acoustic_t2": "Studio",
             "prefab_title": "Prefab & Container",
-            "prefab_desc": "Lightweight, flexible, long-lasting natural insulation felt providing climate control for prefab buildings, container homes, and tent insulation.",
+            "prefab_desc": "لباد عزل طبيعي خفيف ومرن وقابل للتنفس للمباني الجاهزة، والحاويات، والأكواخ (بنغل)، وبيوت الشجر، والخيام.",
             "prefab_t1": "Prefabricated",
             "prefab_t2": "Container",
-            "prefab_t3": "Caravan",
+            "prefab_t3": "بنغل",
             "public_title": "Public & Social Buildings",
             "public_desc": "100% healthy insulation that does not contain carcinogenic substances and improves air quality in high-usage areas such as hospitals, schools, and mosques.",
             "public_t1": "Hospital",
@@ -620,6 +620,7 @@
         "cta_desc": "Our expert team understands your needs and creates custom solutions. Contact us now.",
         "cta_btn": "Contact Us",
         "area_floor_desc": "يستخدم تحت التبليط، والباركيه، وأنظمة التدفئة الأرضية، والأسقف المعلقة. يُفضل أيضًا كعزل حراري تحت السجاد للأرضيات.",
-        "area_prefab_desc": "حل خفيف ومرن للمباني الجاهزة، ومنازل الحاويات، والخيام، وعزل الكرفانات. يمكن استخدامه أيضًا في الكرفانات والسيارات وقطاع السيارات."
+        "area_prefab_desc": "لباد عزل طبيعي خفيف ومرن وقابل للتنفس للمباني الجاهزة، والحاويات، والأكواخ (بنغل)، وبيوت الشجر، والخيام.",
+        "area_prefab_t3": "بنغل"
     }
 }

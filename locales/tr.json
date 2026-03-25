@@ -58,10 +58,10 @@
             "acoustic_t1": "Akustik panel",
             "acoustic_t2": "Stüdyo",
             "prefab_title": "Prefabrik & Konteyner",
-            "prefab_desc": "Prefabrik yapılar, konteyner evler ve çadır izolasyonu için hafif, esnek, uzun ömürlü ve iklimlendirme sağlayan doğal yalıtım keçesi.",
+            "prefab_desc": "Prefabrik yapılar, konteynerler, bungalovlar, ağaç evler ve çadır izolasyonu için hafif, esnek ve nefes alan doğal yalıtım keçesi.",
             "prefab_t1": "Prefabrik",
             "prefab_t2": "Konteyner",
-            "prefab_t3": "Karavan",
+            "prefab_t3": "Bungalov",
             "public_title": "Kamu & Sosyal Binalar",
             "public_desc": "Hastane, okul ve cami gibi yoğun kullanım alanlarında kanserojen madde içermeyen, hava kalitesini artıran %100 sağlıklı yalıtım.",
             "public_t1": "Hastane",
@@ -599,7 +599,8 @@
         "cta_desc": "Uzman ekibimiz, ihtiyaçlarınızı anlayarak size özel çözümler üretir. Hemen iletişime geçin.",
         "cta_btn": "Bize Ulaşın",
         "area_floor_desc": "Şap altı, parke altı, yerden ısıtma sistemleri altında ve asma tavan aralarında uygulanır. Zemin yalıtımlarında halı altı ısı yalıtımı olarak da tercih edilir.",
-        "area_prefab_desc": "Prefabrik yapılarda, konteyner evlerde, çadır ve karavan yalıtımında hafif ve esnek çözüm. Aynı zamanda karavanlarda, araçlarda ve otomotiv sektöründe de kullanılabilir."
+        "area_prefab_desc": "Prefabrik yapılar, konteynerler, bungalovlar, ağaç evler ve çadır izolasyonu için hafif, esnek ve nefes alan doğal yalıtım keçesi.",
+        "area_prefab_t3": "Bungalov"
     },
     "common": {
         "nav_home": "Anasayfa",

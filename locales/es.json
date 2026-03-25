@@ -167,10 +167,10 @@
             "acoustic_t1": "Acoustic panel",
             "acoustic_t2": "Studio",
             "prefab_title": "Prefab & Container",
-            "prefab_desc": "Lightweight, flexible, long-lasting natural insulation felt providing climate control for prefab buildings, container homes, and tent insulation.",
+            "prefab_desc": "Fieltro de aislamiento natural ligero, flexible y transpirable para construcciones prefabricadas, contenedores, bungalows, casas en los árboles y tiendas de campaña.",
             "prefab_t1": "Prefabricated",
             "prefab_t2": "Container",
-            "prefab_t3": "Caravan",
+            "prefab_t3": "Bungalow",
             "public_title": "Public & Social Buildings",
             "public_desc": "100% healthy insulation that does not contain carcinogenic substances and improves air quality in high-usage areas such as hospitals, schools, and mosques.",
             "public_t1": "Hospital",
@@ -620,6 +620,7 @@
         "cta_desc": "Our expert team understands your needs and creates custom solutions. Contact us now.",
         "cta_btn": "Contact Us",
         "area_floor_desc": "Se aplica bajo regla, parquet, sistemas de calefacción por suelo radiante y techos suspendidos. También se prefiere como aislamiento térmico bajo alfombra para pisos.",
-        "area_prefab_desc": "Solución ligera y flexible para construcciones modulares, casas contenedor, carpas y aislamiento de caravanas. También se puede utilizar en caravanas, vehículos y el sector de la automoción."
+        "area_prefab_desc": "Fieltro de aislamiento natural ligero, flexible y transpirable para construcciones prefabricadas, contenedores, bungalows, casas en los árboles y tiendas de campaña.",
+        "area_prefab_t3": "Bungalow"
     }
 }
