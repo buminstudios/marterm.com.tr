@@ -226,13 +226,13 @@ document.addEventListener('DOMContentLoaded', () => {
         ],
         indicatorId: 'scroll-indicator',
         sequences: [
-            { path: '/assets/heros/videolar/herolar/video_1/', frames: 120 },
-            { path: '/assets/heros/videolar/herolar/video_2/', frames: 120 },
-            { path: '/assets/heros/videolar/herolar/video_3/', frames: 120 },
-            { path: '/assets/heros/videolar/herolar/video_4/', frames: 120 },
-            { path: '/assets/heros/videolar/herolar/video_5/', frames: 120 },
-            { path: '/assets/heros/videolar/herolar/video_6/', frames: 120 },
-            { path: '/assets/heros/videolar/herolar/video_7/', frames: 120 }
+            { path: '/assets/heros/video_1/', frames: 120 },
+            { path: '/assets/heros/video_2/', frames: 120 },
+            { path: '/assets/heros/video_3/', frames: 120 },
+            { path: '/assets/heros/video_4/', frames: 120 },
+            { path: '/assets/heros/video_5/', frames: 120 },
+            { path: '/assets/heros/video_6/', frames: 120 },
+            { path: '/assets/heros/video_7/', frames: 120 }
         ],
         hasIntro: true,
         introEndFrame: 51

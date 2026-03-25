@@ -26,9 +26,13 @@ const DEFAULT_BATCH_SIZE = Number(process.env.I18N_BATCH_SIZE || 12);
 const ALLOWED_SHARED_PATHS = new Set([
     'products_page.area_acoustic_t3',
     'products_page.comp_title_accent',
+    'products_page.comp_th3',
     'products_page.comp_t5_v1',
     'products_page.cta_title_2',
     'about_page.story_title_accent',
+    'about_page.stat_thermal_t',
+    'about_page.stat_fire_t',
+    'about_page.stat_class_t',
     'about_page.stats_v1',
     'about_page.stats_v2',
     'about_page.stats_v3',
@@ -39,15 +43,28 @@ const ALLOWED_SHARED_PATHS = new Set([
     'about_page.a1_n',
     'about_page.a2_n',
     'gallery_page.cta_title_2',
+    'gallery_page.cta_title_suffix',
     'catalog_page.cat_title',
     'catalog_page.cta_title_2',
+    'catalog_page.btn_phone',
+    'catalog_page.en_card_lang',
+    'catalog_page.en_card_title',
+    'catalog_page.en_card_desc',
+    'catalog_page.en_card_f1',
+    'catalog_page.en_card_f2',
+    'catalog_page.en_card_btn',
     'contact_page.info_phone_v1',
     'contact_page.info_phone_v2',
     'contact_page.phone_val',
     'contact_page.email_val',
     'contact_page.address_val',
+    'contact_page.map_address',
     'contact_page.form_email_ph',
-    'contact_page.map_company'
+    'contact_page.map_company',
+    'common.footer_address_html',
+    'common.footer_credit_prefix',
+    'common.map_title',
+    'catalog_page.en_card_f3'
 ]);
 
 const OPTIONAL_EMPTY_TARGET_PATHS = new Set([
@@ -156,9 +173,11 @@ function isBlank(value) {
 function isExpectedSharedValue(pathKey, value) {
     if (ALLOWED_SHARED_PATHS.has(pathKey)) return true;
     if (pathKey === 'products_page.comp_f3') return true;
+    if (pathKey === 'products_page.comp_th3') return true;
     if (pathKey === 'about_page.rd_badge_t') return true;
     if (pathKey.startsWith('catalog_page.en_card_')) return true;
     if (!hasLetters(value)) return true;
+    if (value.trim() === '') return true;
     if (/^(Marterm|Bumin Studios)$/u.test(value.trim())) return true;
     return false;
 }

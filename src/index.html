@@ -50,11 +50,11 @@
                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
                     </button>
                     <div class="lang-dropdown">
-                        <a href="#" class="lang-option" data-lang="tr"><img src="https://flagcdn.com/24x18/tr.png" alt="TR"> Türkçe</a>
-                        <a href="#" class="lang-option" data-lang="en"><img src="https://flagcdn.com/24x18/gb.png" alt="EN"> English</a>
-                        <a href="#" class="lang-option" data-lang="es"><img src="https://flagcdn.com/24x18/es.png" alt="ES"> Español</a>
-                        <a href="#" class="lang-option" data-lang="ru"><img src="https://flagcdn.com/24x18/ru.png" alt="RU"> Русский</a>
-                        <a href="#" class="lang-option" data-lang="ar"><img src="https://flagcdn.com/24x18/sa.png" alt="AR"> العربية</a>
+                        <a href="javascript:void(0)" class="lang-option" data-lang="tr"><img src="https://flagcdn.com/24x18/tr.png" alt="TR"> Türkçe</a>
+                        <a href="javascript:void(0)" class="lang-option" data-lang="en"><img src="https://flagcdn.com/24x18/gb.png" alt="EN"> English</a>
+                        <a href="javascript:void(0)" class="lang-option" data-lang="es"><img src="https://flagcdn.com/24x18/es.png" alt="ES"> Español</a>
+                        <a href="javascript:void(0)" class="lang-option" data-lang="ru"><img src="https://flagcdn.com/24x18/ru.png" alt="RU"> Русский</a>
+                        <a href="javascript:void(0)" class="lang-option" data-lang="ar"><img src="https://flagcdn.com/24x18/sa.png" alt="AR"> العربية</a>
                     </div>
                 </div>
             </nav>
@@ -342,7 +342,7 @@
                     <h4 class="footer__heading">{{ common.nav_contact }}</h4>
                     <a href="tel:+905334738346" class="footer__link">+90 (533) 473 83 46</a>
                     <a href="mailto:info@marterm.com.tr" class="footer__link">info@marterm.com.tr</a>
-                    <p class="footer__link footer__link--static">Akif İnan Mah. 5007. Sk.<br>Sühakent Sitesi Altı B Blok No:8<br>Kahramanmaraş / Türkiye</p>
+                    <p class="footer__link footer__link--static">{{{ common.footer_address_html }}}</p>
                 </div>
 
                 <div class="footer__links">
@@ -354,7 +354,7 @@
 
             <div class="footer__bottom">
                 <p>&copy; 2026 Marterm. {{ common.footer_rights }}</p>
-                <p>Design by <a href="https://buminstudios.com" target="_blank" rel="noopener">Bumin Studios</a></p>
+                <p>{{ common.footer_credit_prefix }} <a href="https://buminstudios.com" target="_blank" rel="noopener">Bumin Studios</a></p>
             </div>
         </div>
     </footer>

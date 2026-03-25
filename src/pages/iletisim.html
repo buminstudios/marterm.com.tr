@@ -201,7 +201,7 @@
                             allowfullscreen="" 
                             loading="lazy" 
                             referrerpolicy="no-referrer-when-downgrade"
-                            title="Marterm Konum">
+                            title="{{ common.map_title }}">
                         </iframe>
                     </div>
                     <div class="contact-map__info">
@@ -255,7 +255,7 @@
                     <h4 class="footer__heading">{{ common.nav_contact }}</h4>
                     <a href="tel:+905334738346" class="footer__link">{{ contact_page.phone_val }}</a>
                     <a href="mailto:info@marterm.com.tr" class="footer__link">{{ contact_page.email_val }}</a>
-                    <p class="footer__link footer__link--static">Akif İnan Mah. 5007. Sk.<br>Sühakent Sitesi Altı B Blok No:8<br>Kahramanmaraş / Türkiye</p>
+                    <p class="footer__link footer__link--static">{{{ common.footer_address_html }}}</p>
                 </div>
 
                 <div class="footer__links">
@@ -267,7 +267,7 @@
 
             <div class="footer__bottom">
                 <p>&copy; 2026 Marterm. {{ common.footer_rights }}</p>
-                <p>Design by <a href="https://buminstudios.com" target="_blank" rel="noopener">Bumin Studios</a></p>
+                <p>{{ common.footer_credit_prefix }} <a href="https://buminstudios.com" target="_blank" rel="noopener">Bumin Studios</a></p>
             </div>
         </div>
     </footer>
