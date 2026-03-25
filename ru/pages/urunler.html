@@ -163,19 +163,24 @@
     </section>
 
     <!-- ===== APPLICATION AREAS ===== -->
-    <section class="app-areas" id="app-areas" style="padding-top: 0;">
-        <div class="app-areas__full-hero" style="background: url('/assets/images/uygulama-alanlari.jpeg') center/cover no-repeat; width: 100%; min-height: 450px; display: flex; flex-direction: column; justify-content: flex-end; position: relative; margin-bottom: 4rem; padding-bottom: 3rem;">
-            <!-- Hafif alt gölge, yazının net okunması için (görselin büyük bölümü şeffaf kalıyor) -->
-            <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(18,18,18,0) 40%, rgba(18,18,18,0.9));"></div>
-            
-            <div class="container reveal-up" style="position: relative; z-index: 2; text-align: center;">
+    <section class="app-areas" id="app-areas" style="padding: 0; position: relative; overflow: hidden;">
+        <!-- Arka Plan Görseli -->
+        <div style="position: absolute; inset: 0; background: url('/assets/images/uygulama-alanlari.jpeg') center top/cover no-repeat; z-index: 0;"></div>
+        
+        <!-- Alttan Yukarıya Harmanlanan Gradyan (Kutuların arkasını hafif karartıp sayfa rengiyle bütünleşir) -->
+        <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(18,18,18,0) 0%, rgba(18,18,18,0.4) 60%, rgba(18,18,18,1) 100%); z-index: 1;"></div>
+        
+        <div style="position: relative; z-index: 2; padding-top: 6rem; padding-bottom: var(--s-section);">
+            <!-- Başlık Alanı -->
+            <div class="container reveal-up" style="text-align: center; margin-bottom: 4rem;">
                 <p class="section-header__eyebrow" style="text-shadow: 0 2px 10px rgba(0,0,0,0.8);">Application Areas</p>
                 <h2 class="section-header__title" style="text-shadow: 0 4px 20px rgba(0,0,0,0.9); margin-bottom: 1rem;">В Каждом Здании<br><span class="text-accent">Естественная Изоляция</span></h2>
                 <p class="section-header__desc section-header__desc--wide" style="max-width: 1400px; margin: 0 auto; color: #fff; font-size: 1.1rem; text-shadow: 0 2px 15px rgba(0,0,0,1);">Естественные решения для изоляции, разработанные с использованием технологии козьей шерсти для вилл, квартир, промышленных зданий и специальных областей.</p>
             </div>
-        </div>
-        <div class="container">
-            <div class="app-areas-grid">
+            
+            <!-- Grid Alanı -->
+            <div class="container">
+                <div class="app-areas-grid">
                 <!-- 1: Çatı -->
                 <div class="app-area-card reveal-up" style="--delay:0.1s" id="area-roof">
                     <div class="app-area-card__icon">
