@@ -91,11 +91,15 @@
 
     <!-- ===== PRODUCT VARIANTS (Thickness-Based) ===== -->
     <section class="product-variants" id="product-variants">
+        <div class="product-variants__bg">
+            <img src="/assets/images/kece-urunler-hero.webp" alt="Keçe Ürünleri" loading="lazy">
+            <div class="product-variants__gradient"></div>
+        </div>
         <div class="container">
             <div class="section-header reveal-up">
                 <p class="section-header__eyebrow">{{ products_page.variants_eyebrow }}</p>
                 <h2 class="section-header__title">{{ products_page.variants_title }}<br><span class="text-accent">{{ products_page.variants_title_accent }}</span></h2>
-                <p class="section-header__desc">{{ products_page.variants_desc }}</p>
+                <p class="section-header__desc section-header__desc--wide">{{ products_page.variants_desc }}</p>
             </div>
 
             <div class="variants-grid">
@@ -105,8 +109,9 @@
                     <p class="variant-card__weight">400 g/m² · 160 kg/m³</p>
                     <ul class="variant-card__specs">
                         <li>{{ products_page.v_thermal }} <span>0.034 W/mK</span></li>
-                        <li>{{ products_page.v_tensile }} <span>520 N</span></li>
-                        <li>{{ products_page.v_airflow }} <span>104.6 kPa·s/m²</span></li>
+                        <li>{{ products_page.v_tensile }} <span>420 N</span></li>
+                        <li>{{ products_page.v_sound }} <span>0.80-0.85</span></li>
+                        <li>{{ products_page.v_res }} <span>24.69 m²K/W</span></li>
                     </ul>
                 </div>
                 <!-- 5.5mm -->
@@ -115,8 +120,9 @@
                     <p class="variant-card__weight">650 g/m² · 120 kg/m³</p>
                     <ul class="variant-card__specs">
                         <li>{{ products_page.v_thermal }} <span>0.035 W/mK</span></li>
-                        <li>{{ products_page.v_tensile }} <span>400 N</span></li>
-                        <li>{{ products_page.v_airflow }} <span>88.9 kPa·s/m²</span></li>
+                        <li>{{ products_page.v_tensile }} <span>500 N</span></li>
+                        <li>{{ products_page.v_sound }} <span>0.80-0.85</span></li>
+                        <li>{{ products_page.v_res }} <span>24.00 m²K/W</span></li>
                     </ul>
                 </div>
                 <!-- 7mm -->
@@ -126,7 +132,8 @@
                     <ul class="variant-card__specs">
                         <li>{{ products_page.v_thermal }} <span>0.036 W/mK</span></li>
                         <li>{{ products_page.v_tensile }} <span>900 N</span></li>
-                        <li>{{ products_page.v_airflow }} <span>87.3 kPa·s/m²</span></li>
+                        <li>{{ products_page.v_sound }} <span>0.80-0.85</span></li>
+                        <li>{{ products_page.v_res }} <span>22.52 m²K/W</span></li>
                     </ul>
                 </div>
                 <!-- 9.5mm -->
@@ -136,7 +143,8 @@
                     <ul class="variant-card__specs">
                         <li>{{ products_page.v_thermal }} <span>0.036 W/mK</span></li>
                         <li>{{ products_page.v_tensile }} <span>950 N</span></li>
-                        <li>{{ products_page.v_airflow }} <span>94.8 kPa·s/m²</span></li>
+                        <li>{{ products_page.v_sound }} <span>0.80-0.85</span></li>
+                        <li>{{ products_page.v_res }} <span>22.91 m²K/W</span></li>
                     </ul>
                 </div>
                 <!-- 11.5mm -->
@@ -146,7 +154,8 @@
                     <ul class="variant-card__specs">
                         <li>{{ products_page.v_thermal }} <span>0.039 W/mK</span></li>
                         <li>{{ products_page.v_tensile }} <span>1000 N</span></li>
-                        <li>{{ products_page.v_airflow }} <span>100.6 kPa·s/m²</span></li>
+                        <li>{{ products_page.v_sound }} <span>0.80-0.85</span></li>
+                        <li>{{ products_page.v_res }} <span>28.20 m²K/W</span></li>
                     </ul>
                 </div>
             </div>

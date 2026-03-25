@@ -26,7 +26,7 @@
         "variants_eyebrow": "Product Varieties",
         "variants_title": "Felt Insulation Products",
         "variants_title_accent": "by Thickness",
-        "variants_desc": "Our natural insulation felts, produced with a goat hair + polyester fiber blend using needle-punching fixation technique, offer solutions suitable for every need with different thickness and density options.",
+        "variants_desc": "Developed with different thickness options, Marterm felts offer flexible solutions for heat, sound, and structural comfort.",
         "variants_w_h": "Weight/Density",
         "var_specs_thermal": "Thermal Conductivity",
         "var_specs_tensile": "Tensile Strength",
@@ -143,7 +143,7 @@
         "cta_desc": "Our expert team is with you to determine the most suitable product and thickness for your project.",
         "cta_btn_contact": "Get a Quote",
         "cta_btn_catalog": "Download Catalog",
-        "v_thermal": "High Thermal Resistance",
+        "v_thermal": "Thermal Conductivity",
         "v_tensile": "Tensile Strength",
         "v_airflow": "Airflow Resistance",
         "areas": {
@@ -236,7 +236,9 @@
         "comp_r6_l": "Carcinogenic Substances",
         "comp_r6_v1": "None",
         "comp_r6_v2": "May contain",
-        "cta_title_after": ""
+        "cta_title_after": "",
+        "v_sound": "Avg. Sound Absorp.",
+        "v_res": "Thermal Resistance"
     },
     "about_page": {
         "title": "About Us — Marterm | Insulating the Future",

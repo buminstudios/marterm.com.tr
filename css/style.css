@@ -643,6 +643,10 @@ img { max-width: 100%; display: block; }
     line-height: 1.7;
 }
 
+.section-header__desc--wide {
+    max-width: 100%;
+}
+
 /* ===================================================================
    FEATURES — Card Grid
    =================================================================== */
@@ -1513,9 +1517,6 @@ html[dir="rtl"] .news-card__link:hover svg {
     padding: var(--s-section) 0;
     background: var(--c-bg);
     position: relative;
-    min-height: 85vh;
-    display: flex;
-    align-items: center;
     overflow: hidden;
 }
 

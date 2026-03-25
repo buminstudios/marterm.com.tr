@@ -26,10 +26,10 @@
         "variants_eyebrow": "Ürün Çeşitleri",
         "variants_title": "Kalınlığa Göre",
         "variants_title_accent": "Keçe Yalıtım Ürünleri",
-        "variants_desc": "Keçi kılı + polyester lif karışımıyla iğneleme tabanlı fiksajlama tekniği ile üretilen doğal yalıtım keçelerimiz, farklı kalınlık ve yoğunluk seçenekleriyle her ihtiyaca uygun çözümler sunar.",
+        "variants_desc": "Farklı kalınlık seçenekleriyle geliştirilen Marterm keçeleri, ısı, ses ve yapı konforu için esnek çözümler sunar.",
         "variants_w_h": "Ağırlık/Yoğunluk",
-        "v_thermal": "Isı İletkenliği",
-        "v_tensile": "Çekme Dayanımı",
+        "v_thermal": "Isıl İletkenlik",
+        "v_tensile": "Kopma Mukavemeti",
         "v_airflow": "Hava Akış Direnci",
         "var_specs_thermal": "Isı İletkenliği",
         "var_specs_tensile": "Çekme Dayanımı",
@@ -236,7 +236,9 @@
         "cta_title_after": "",
         "cta_desc": "Uzman kadromuz, projenize en uygun ürün ve kalınlığı belirlemek için yanınızda.",
         "cta_btn_contact": "Teklif Alın",
-        "cta_btn_catalog": "Katalog İndir"
+        "cta_btn_catalog": "Katalog İndir",
+        "v_sound": "Ort. Ses Yutumu",
+        "v_res": "Isıl Direnç"
     },
     "about_page": {
         "title": "Hakkımızda — Marterm | Geleceği Yalıtıyoruz",
