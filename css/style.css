@@ -1657,9 +1657,14 @@ html[dir="rtl"] .news-card__link:hover svg {
     position: relative;
 }
 
+.app-areas .container {
+    max-width: 1920px;
+    width: 96%;
+}
+
 .app-areas-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 1.5rem;
     margin-top: 3rem;
 }
