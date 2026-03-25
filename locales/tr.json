@@ -49,7 +49,7 @@
             "wall_t2": "İç duvar",
             "wall_t3": "Alçıpan",
             "floor_title": "Zemin & Tavan",
-            "floor_desc": "Şap altı, parke altı, yerden ısıtma sistemleri altında ve asma tavan aralarında uygulanır.",
+            "floor_desc": "Şap altı, parke altı, yerden ısıtma sistemleri altında ve asma tavan aralarında uygulanır. Zemin yalıtımlarında halı altı ısı yalıtımı olarak da tercih edilir.",
             "floor_t1": "Şap altı",
             "floor_t2": "Parke altı",
             "floor_t3": "Asma tavan",
@@ -58,7 +58,7 @@
             "acoustic_t1": "Akustik panel",
             "acoustic_t2": "Stüdyo",
             "prefab_title": "Prefabrik & Konteyner",
-            "prefab_desc": "Prefabrik yapılarda, konteyner evlerde, çadır ve karavan yalıtımında hafif ve esnek çözüm.",
+            "prefab_desc": "Prefabrik yapılarda, konteyner evlerde, çadır ve karavan yalıtımında hafif ve esnek çözüm. Aynı zamanda karavanlarda, araçlarda ve otomotiv sektöründe de kullanılabilir.",
             "prefab_t1": "Prefabrik",
             "prefab_t2": "Konteyner",
             "prefab_t3": "Karavan",
@@ -239,7 +239,7 @@
         "cta_btn_catalog": "Katalog İndir",
         "v_sound": "Ort. Ses Yutumu",
         "v_res": "Isıl Direnç",
-        "areas_desc": "Villa, apartman, endüstriyel yapı ve özel uygulama alanlarında, keçi kılı teknolojisiyle geliştirilen doğal yalıtım çözümleri. Zemin yalıtımlarına halı altı ısı yalıtım altı. Aynı zamanda karavanlarda, araçlarda otomotiv sektöründe de kullanılabilir."
+        "areas_desc": "Villa, apartman, endüstriyel yapı ve özel uygulama alanlarında, keçi kılı teknolojisiyle geliştirilen doğal yalıtım çözümleri."
     },
     "about_page": {
         "title": "Hakkımızda — Marterm | Geleceği Yalıtıyoruz",
@@ -587,7 +587,9 @@
         "cta_title_accent": "Birlikte",
         "cta_title_2": "Hayata Geçirelim",
         "cta_desc": "Uzman ekibimiz, ihtiyaçlarınızı anlayarak size özel çözümler üretir. Hemen iletişime geçin.",
-        "cta_btn": "Bize Ulaşın"
+        "cta_btn": "Bize Ulaşın",
+        "area_floor_desc": "Şap altı, parke altı, yerden ısıtma sistemleri altında ve asma tavan aralarında uygulanır. Zemin yalıtımlarında halı altı ısı yalıtımı olarak da tercih edilir.",
+        "area_prefab_desc": "Prefabrik yapılarda, konteyner evlerde, çadır ve karavan yalıtımında hafif ve esnek çözüm. Aynı zamanda karavanlarda, araçlarda ve otomotiv sektöründe de kullanılabilir."
     },
     "common": {
         "nav_home": "Anasayfa",

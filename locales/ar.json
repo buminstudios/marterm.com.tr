@@ -158,7 +158,7 @@
             "wall_t2": "Inner wall",
             "wall_t3": "Drywall",
             "floor_title": "Floor & Ceiling",
-            "floor_desc": "Applications under screed, under parquet, underfloor heating systems, and suspended ceilings.",
+            "floor_desc": "يستخدم تحت التبليط، والباركيه، وأنظمة التدفئة الأرضية، والأسقف المعلقة. يُفضل أيضًا كعزل حراري تحت السجاد للأرضيات.",
             "floor_t1": "Under screed",
             "floor_t2": "Under parquet",
             "floor_t3": "Suspended ceiling",
@@ -167,7 +167,7 @@
             "acoustic_t1": "Acoustic panel",
             "acoustic_t2": "Studio",
             "prefab_title": "Prefab & Container",
-            "prefab_desc": "Lightweight and flexible solutions for prefab structures, container homes, tents, and caravan insulation.",
+            "prefab_desc": "حل خفيف ومرن للمباني الجاهزة، ومنازل الحاويات، والخيام، وعزل الكرفانات. يمكن استخدامه أيضًا في الكرفانات والسيارات وقطاع السيارات.",
             "prefab_t1": "Prefabricated",
             "prefab_t2": "Container",
             "prefab_t3": "Caravan",
@@ -239,7 +239,7 @@
         "cta_title_after": "",
         "v_sound": "امتصاص الصوت",
         "v_res": "المقاومة الحرارية",
-        "areas_desc": "حلول عزل طبيعية مطورة بتقنية شعر الماعز للفلل، والشقق، والمباني الصناعية. عزل حراري تحت السجاد للأرضيات. كما يمكن استخدامه في الكرفانات والسيارات وقطاع المركبات."
+        "areas_desc": "حلول عزل طبيعية مطورة بتقنية شعر الماعز للفلل، والشقق، والمباني الصناعية ومجالات التطبيق الخاصة."
     },
     "about_page": {
         "title": "About Us — Marterm | Insulating the Future",
@@ -608,6 +608,8 @@
         "cta_title_accent": "Your Project",
         "cta_title_2": "to Life Together",
         "cta_desc": "Our expert team understands your needs and creates custom solutions. Contact us now.",
-        "cta_btn": "Contact Us"
+        "cta_btn": "Contact Us",
+        "area_floor_desc": "يستخدم تحت التبليط، والباركيه، وأنظمة التدفئة الأرضية، والأسقف المعلقة. يُفضل أيضًا كعزل حراري تحت السجاد للأرضيات.",
+        "area_prefab_desc": "حل خفيف ومرن للمباني الجاهزة، ومنازل الحاويات، والخيام، وعزل الكرفانات. يمكن استخدامه أيضًا في الكرفانات والسيارات وقطاع السيارات."
     }
 }
