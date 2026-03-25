@@ -163,13 +163,18 @@
     </section>
 
     <!-- ===== APPLICATION AREAS ===== -->
-    <section class="app-areas" id="app-areas">
-        <div class="container">
-            <div class="section-header reveal-up" style="background: linear-gradient(rgba(18, 18, 18, 0.65), rgba(18, 18, 18, 0.95)), url('/assets/images/uygulama-alanlari.jpeg') center/cover no-repeat; border-radius: var(--r-lg); padding: 6rem 2rem; margin-bottom: 4rem; border: 1px solid rgba(255, 255, 255, 0.05); min-height: 350px; display: flex; flex-direction: column; justify-content: center;">
-                <p class="section-header__eyebrow">Application Areas</p>
-                <h2 class="section-header__title">En Cada Estructura<br><span class="text-accent">Aislamiento Natural</span></h2>
-                <p class="section-header__desc section-header__desc--wide" style="max-width: 1400px; margin: 0 auto; color: var(--c-surface-200);">Soluciones de aislamiento natural desarrolladas con tecnología de pelo de cabra para villas, apartamentos, edificios industriales y áreas especiales.</p>
+    <section class="app-areas" id="app-areas" style="padding-top: 0;">
+        <div class="app-areas__full-hero" style="background: url('/assets/images/uygulama-alanlari.jpeg') center/cover no-repeat; width: 100%; min-height: 450px; display: flex; flex-direction: column; justify-content: flex-end; position: relative; margin-bottom: 4rem; padding-bottom: 3rem;">
+            <!-- Hafif alt gölge, yazının net okunması için (görselin büyük bölümü şeffaf kalıyor) -->
+            <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(18,18,18,0) 40%, rgba(18,18,18,0.9));"></div>
+            
+            <div class="container reveal-up" style="position: relative; z-index: 2; text-align: center;">
+                <p class="section-header__eyebrow" style="text-shadow: 0 2px 10px rgba(0,0,0,0.8);">Application Areas</p>
+                <h2 class="section-header__title" style="text-shadow: 0 4px 20px rgba(0,0,0,0.9); margin-bottom: 1rem;">En Cada Estructura<br><span class="text-accent">Aislamiento Natural</span></h2>
+                <p class="section-header__desc section-header__desc--wide" style="max-width: 1400px; margin: 0 auto; color: #fff; font-size: 1.1rem; text-shadow: 0 2px 15px rgba(0,0,0,1);">Soluciones de aislamiento natural desarrolladas con tecnología de pelo de cabra para villas, apartamentos, edificios industriales y áreas especiales.</p>
             </div>
+        </div>
+        <div class="container">
             <div class="app-areas-grid">
                 <!-- 1: Çatı -->
                 <div class="app-area-card reveal-up" style="--delay:0.1s" id="area-roof">
