@@ -1670,8 +1670,10 @@ html[dir="rtl"] .news-card__link:hover svg {
 }
 
 .app-area-card {
-    background: var(--c-bg-card);
-    border: 1px solid var(--c-border);
+    background: rgba(18, 18, 18, 0.55);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
     border-radius: var(--r-md);
     padding: 2rem 1.5rem;
     transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
