@@ -494,3 +494,42 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+/* ========================================================================= */
+/* CERTIFICATE MODAL LOGIC
+/* ========================================================================= */
+function openCertModal(imagePaths) {
+    const modal = document.getElementById('cert-modal');
+    const content = document.getElementById('cert-modal-content');
+    if (!modal || !content) return;
+
+    content.innerHTML = ''; // Clear old content
+    
+    // Add images
+    imagePaths.forEach(src => {
+        const img = document.createElement('img');
+        img.src = src;
+        img.classList.add('cert-modal__img');
+        
+        // Prevent context menu (right click) on image
+        img.addEventListener('contextmenu', e => e.preventDefault());
+        
+        content.appendChild(img);
+    });
+
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Stop scrolling
+}
+
+function closeCertModal() {
+    const modal = document.getElementById('cert-modal');
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scrolling
+    }
+}
+
+// Close on Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeCertModal();
+});

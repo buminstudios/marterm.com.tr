@@ -3021,6 +3021,112 @@ a.contact-card__value:hover {
 }
 
 /* ===================================================================
+   NEW SECTIONS: CERTIFICATES (About), R&D (About) & Acoustic Science (Products)
+   =================================================================== */
+
+/* About Certificates */
+.about-certs {
+    padding: var(--s-section) 0;
+    background: var(--c-bg);
+}
+
+.about-certs__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+    max-width: 320px;
+    margin-inline: auto;
+}
+
+.cert-card-new {
+    background: var(--c-bg-elevated);
+    padding: 2rem;
+    border-radius: var(--r-md);
+    border: 1px solid var(--c-border);
+    transition: all var(--t-smooth) ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.cert-card-new:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-color: var(--c-accent);
+}
+
+.cert-card-new::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--c-accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--t-smooth) ease;
+}
+
+.cert-card-new:hover::before {
+    transform: scaleX(1);
+}
+
+.cert-card-new__icon {
+    width: 64px;
+    height: 64px;
+    background: var(--c-bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+    transition: transform var(--t-smooth) ease;
+}
+
+.cert-card-new:hover .cert-card-new__icon {
+    transform: scale(1.1);
+}
+
+.cert-card-new__title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--c-heading);
+    margin-bottom: 0.5rem;
+}
+
+.cert-card-new__desc {
+    color: var(--c-text-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.cert-card-new__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--c-accent);
+    color: white;
+    transition: all var(--t-smooth) ease;
+}
+
+.cert-card-new:hover .cert-card-new__link {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(100, 168, 64, 0.3);
+}
+
+/* ===================================================================
    NEW SECTIONS: R&D (About) & Acoustic Science (Products)
    =================================================================== */
 
@@ -3323,4 +3429,222 @@ a.contact-card__value:hover {
 }
 .lang-option img {
     border: 1px solid rgba(0,0,0,0.1);
+}
+
+/* ========================================================================= */
+/* CERTIFICATES & DOCUMENTS
+/* ========================================================================= */
+.about-certificates {
+    padding: var(--s-section) 0;
+    background: var(--c-bg);
+}
+
+.cert-grid {
+    display: flex;
+    justify-content: center;
+    gap: var(--s-gap);
+    margin-top: clamp(2rem, 4vw, 3rem);
+    flex-wrap: wrap;
+}
+
+.cert-card {
+    background: var(--c-bg-card);
+    border: 1px solid var(--c-border);
+    border-radius: var(--r-md);
+    padding: 1.25rem;
+    flex: 0 1 calc(20% - var(--s-gap));
+    min-width: 180px;
+    max-width: 260px;
+    text-align: center;
+    cursor: pointer;
+    transition: all var(--t-smooth);
+}
+
+.cert-card:hover {
+    border-color: var(--c-accent);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Placeholder card styling */
+.cert-card--placeholder {
+    cursor: default;
+    opacity: 0.6;
+}
+
+.cert-card--placeholder:hover {
+    border-color: var(--c-border-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.cert-card__placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 1rem;
+    color: var(--c-text-muted);
+}
+
+.cert-card__placeholder svg {
+    opacity: 0.4;
+}
+
+.cert-card__coming {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--c-text-muted);
+    background: rgba(255,255,255,0.05);
+    padding: 0.35rem 0.75rem;
+    border-radius: 100px;
+    border: 1px solid var(--c-border);
+}
+
+.cert-card__img-wrap {
+    position: relative;
+    border-radius: var(--r-sm);
+    overflow: hidden;
+    margin-bottom: 1rem;
+    aspect-ratio: 1/1.414; /* A4 Ratio */
+    background: #fff;
+}
+
+.cert-card--placeholder .cert-card__img-wrap {
+    background: var(--c-bg-elevated);
+    border: 1px dashed var(--c-border);
+}
+
+.cert-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--t-smooth);
+}
+
+.cert-card:hover .cert-card__img {
+    transform: scale(1.05);
+}
+
+.cert-card__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity var(--t-fast);
+    color: var(--c-white);
+}
+
+.cert-card:hover .cert-card__overlay {
+    opacity: 1;
+}
+
+.cert-card__title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 0.35rem;
+    color: var(--c-text);
+}
+
+.cert-card__desc {
+    font-size: 0.75rem;
+    color: var(--c-text-secondary);
+    line-height: 1.4;
+}
+
+/* Responsive cert grid */
+@media (max-width: 1200px) {
+    .cert-card {
+        flex: 0 1 calc(33.333% - var(--s-gap));
+    }
+}
+
+@media (max-width: 768px) {
+    .cert-card {
+        flex: 0 1 calc(50% - var(--s-gap));
+    }
+}
+
+@media (max-width: 480px) {
+    .cert-card {
+        flex: 0 1 100%;
+        max-width: 100%;
+    }
+}
+
+/* Modal */
+.cert-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--t-fast);
+}
+
+.cert-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.cert-modal__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(5px);
+}
+
+.cert-modal__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    color: var(--c-white);
+    cursor: pointer;
+    z-index: 2;
+    padding: 10px;
+    transition: color var(--t-fast);
+}
+
+.cert-modal__close:hover {
+    color: var(--c-accent);
+}
+
+.cert-modal__content {
+    position: relative;
+    z-index: 1;
+    max-width: 90vw;
+    max-height: 90vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem 0;
+}
+
+.cert-modal__content::-webkit-scrollbar {
+    width: 8px;
+}
+.cert-modal__content::-webkit-scrollbar-thumb {
+    background: var(--c-border-hover);
+    border-radius: 4px;
+}
+
+.cert-modal__img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--r-sm);
+    pointer-events: none; /* Prevent right click + drag */
+    user-select: none;
+    -webkit-user-drag: none;
 }
