@@ -249,7 +249,15 @@
         "cta_title_after": "",
         "v_sound": "Absorción Acúst.",
         "v_res": "Resistencia Tér.",
-        "areas_desc": "Soluciones de aislamiento natural desarrolladas con tecnología de pelo de cabra para villas, apartamentos, edificios industriales y áreas especiales."
+        "areas_desc": "Soluciones de aislamiento natural desarrolladas con tecnología de pelo de cabra para villas, apartamentos, edificios industriales y áreas especiales.",
+        "bed_eyebrow": "Ropa de Cama y Espacios de Vida",
+        "bed_title": "Sueño Saludable con",
+        "bed_title_accent": "Confort Natural",
+        "bed_desc": "El fieltro de pelo de cabra proporciona regulación térmica natural y control de humedad, creando un ambiente de sueño saludable.",
+        "bed_f1": "Regulación térmica natural",
+        "bed_f2": "Antibacteriano y antialérgico",
+        "bed_f3": "Estructura transpirable y equilibrada",
+        "bed_img_alt": "Aplicación de fieltro en camas"
     },
     "about_page": {
         "title": "About Us — Marterm | Insulating the Future",

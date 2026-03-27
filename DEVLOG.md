@@ -224,3 +224,16 @@
 - `locales/tr.json`, `en.json`, `es.json`, `ru.json`, `ar.json` — Yeni anahtarlar
 
 **Build Durumu:** ✅ Tüm 5 dil başarıyla derlendi.
+
+### Yatak Showcase Bölümü (Ürünler Sayfası)
+- ✅ **Yeni Section:** Uygulama alanları ile malzeme özellikleri arasına "Yataklarda Doğal Konfor Katmanı" bölümü eklendi.
+- ✅ **Hover Görsel Efekti:** Sağda görsel kartı — `bed-1.webp` varsayılan, mouse üzerine gelince 0.6s crossfade ile `bed-2.webp`'ye geçiş.
+- ✅ **Görsel Optimizasyonu:** `bed-1.png` (4.8MB → 237KB) ve `bed-2.png` (5.3MB → 226KB) webp formatına çevrildi (%95 küçültme).
+- ✅ **Layout:** İki sütunlu grid (sol metin, sağ görsel), 1600px max-width container, responsive breakpoint'ler.
+- ✅ **Locale:** 5 dile yatak bölümü anahtarları eklendi (`bed_eyebrow`, `bed_title`, `bed_desc`, `bed_f1-f3` vb.).
+
+### Değişen Dosyalar
+- `src/pages/urunler.html` — Yatak showcase section
+- `css/style.css` — Bed showcase stilleri
+- `assets/images/bed-1.webp`, `bed-2.webp` — Optimize görseller
+- `locales/*.json` — Yatak bölümü anahtarları

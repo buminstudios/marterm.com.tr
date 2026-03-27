@@ -249,7 +249,15 @@
         "cta_title_after": "",
         "v_sound": "Avg. Sound Absorp.",
         "v_res": "Thermal Resistance",
-        "areas_desc": "Natural insulation solutions developed with goat hair technology for villas, apartments, industrial buildings, and special applications."
+        "areas_desc": "Natural insulation solutions developed with goat hair technology for villas, apartments, industrial buildings, and special applications.",
+        "bed_eyebrow": "Bedding & Living Spaces",
+        "bed_title": "Healthy Sleep with",
+        "bed_title_accent": "Natural Comfort",
+        "bed_desc": "Goat hair felt provides natural thermal regulation and moisture control in bedding and living spaces, creating a healthy sleep environment. Unlike synthetic materials, its breathable structure keeps your body at a natural temperature.",
+        "bed_f1": "Natural thermal regulation",
+        "bed_f2": "Anti-bacterial and anti-allergenic",
+        "bed_f3": "Breathable, moisture-balancing structure",
+        "bed_img_alt": "Goat hair felt bedding application"
     },
     "about_page": {
         "title": "About Us — Marterm | Insulating the Future",

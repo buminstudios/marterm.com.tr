@@ -249,7 +249,15 @@
         "cta_btn_catalog": "Katalog İndir",
         "v_sound": "Ort. Ses Yutumu",
         "v_res": "Isıl Direnç",
-        "areas_desc": "Villa, apartman, endüstriyel yapı ve özel uygulama alanlarında, keçi kılı teknolojisiyle geliştirilen doğal yalıtım çözümleri."
+        "areas_desc": "Villa, apartman, endüstriyel yapı ve özel uygulama alanlarında, keçi kılı teknolojisiyle geliştirilen doğal yalıtım çözümleri.",
+        "bed_eyebrow": "Yatak Uygulamaları",
+        "bed_title": "Yataklarda Doğal",
+        "bed_title_accent": "Konfor Katmanı",
+        "bed_desc": "Marterm ses ve termal yalıtım keçeleri, keçi kılı teknolojisiyle geliştirilen yapısıyla yatak iç katmanlarında da kullanılır. İnce, nefes alan ve dengeli yapısı sayesinde konfor, ısı dengesi ve doğal malzeme hissine katkı sunar.",
+        "bed_f1": "Doğal termal düzenleme",
+        "bed_f2": "Anti-bakteriyel ve anti-alerjik",
+        "bed_f3": "Nefes alan, nem dengeleyici yapı",
+        "bed_img_alt": "Keçi kılı keçe yatak uygulaması"
     },
     "about_page": {
         "title": "Hakkımızda — Marterm | Geleceği Yalıtıyoruz",
