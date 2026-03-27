@@ -2737,9 +2737,14 @@ html[dir="rtl"] .news-card__link:hover svg {
     background: var(--c-bg);
 }
 
+.contact-info .container {
+    max-width: 100%;
+    padding: 0 clamp(1.25rem, 3vw, 2.5rem);
+}
+
 .contact-cards {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: var(--s-gap);
 }
 

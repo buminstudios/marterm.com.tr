@@ -197,3 +197,30 @@
 - User's manual modifications (Prof. Dr. İbrahim Yıldız, Doç. Dr. Ayşe Yılmaz, and Sertifika titles) were done directly in the `pages/hakkimizda.html` root directory instead of the build source system (`locales/tr.json`).
 - These changes were being overwritten during `node build.js`. 
 - Extracted the local changes from git history & the root `pages/` folder, and securely placed them into `locales/tr.json` so they are now preserved across builds.
+
+---
+
+## 📅 [27 Mart 2026] - Oturum: Sertifikalar Bölümü & İletişim Sayfası Güncellemeleri
+
+### Sertifikalar Bölümü (Hakkımızda Sayfası)
+- ✅ **5 Kart Düzeni:** Sertifikalar bölümü 5 yatay kart olarak yeniden tasarlandı.
+  - 1 aktif CE belgesi kartı (lightbox/modal ile tıklanabilir)
+  - 4 placeholder kartı: ISO 9001, Marka Tescili, TSE Belgesi, Yangın Testi
+  - Her placeholder kartında SVG ikon ve "Yakında" badge'i
+- ✅ **CSS:** `.cert-grid` flexbox 5 sütuna güncellendi, responsive breakpoint'ler eklendi (tablet: 3, küçük tablet: 2, mobil: 1).
+- ✅ **Locale Anahtarları:** `cert_iso_title`, `cert_brand_title`, `cert_tse_title`, `cert_fire_title` ve açıklamaları + `cert_coming_soon` anahtarları 5 dil dosyasına (TR, EN, ES, RU, AR) eklendi.
+
+### İletişim Sayfası Güncellemeleri
+- ✅ **Fabrika Adresi Eklendi:** Yeni fabrika kartı (fabrika ikonu ile) eklendi: `Organize Sanayi Bölgesi, 20.cad no:2, 46100 Onikişubat/Kahramanmaraş, Türkiye`
+- ✅ **Adres → Ofis:** Mevcut adres kartının başlığı "Adres" yerine "Ofis" olarak güncellendi (tüm dillerde).
+- ✅ **Locale Anahtarları:** `factory_title`, `factory_val`, `factory_note` anahtarları 5 dil dosyasına eklendi.
+- ✅ **5 Kart Grid:** Contact cards grid `repeat(4, 1fr)` → `repeat(5, 1fr)` olarak güncellendi.
+- ✅ **Tam Genişlik:** Contact-info section'ı `.container` max-width kısıtlamasından çıkarılarak tam sayfa genişliğine yayıldı.
+
+### Değişen Dosyalar
+- `src/pages/hakkimizda.html` — Sertifika kartları
+- `src/pages/iletisim.html` — Fabrika adresi kartı
+- `css/style.css` — Grid düzenleri ve tam genişlik
+- `locales/tr.json`, `en.json`, `es.json`, `ru.json`, `ar.json` — Yeni anahtarlar
+
+**Build Durumu:** ✅ Tüm 5 dil başarıyla derlendi.
