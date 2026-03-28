@@ -1,0 +1,19 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # QR kod kurtarma: /katalog adresine gelenleri /pages/katalog.html dosyasina yonlendirir.
+    # Adres cubugunda /katalog olarak kalmaya devam eder, QR kod asla bozulmaz!
+    RewriteRule ^katalog/?$ /pages/katalog.html [L,QSA]
+    
+    # Ileride baska SEO dostu linkler kurmak istersen ayni mantikla asagiya ekleyebiliriz:
+    # Ornegin: /urunler -> /pages/urunler.html
+    RewriteRule ^urunler/?$ /pages/urunler.html [L,QSA]
+    RewriteRule ^hakkimizda/?$ /pages/hakkimizda.html [L,QSA]
+    RewriteRule ^galeri/?$ /pages/galeri.html [L,QSA]
+    RewriteRule ^iletisim/?$ /pages/iletisim.html [L,QSA]
+    
+    # Eger 404 veya .html uzantisi silinmis olarak sayfalara ulasilmak istenirse:
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^pages/([^/]+)$ /pages/$1.html [L]
+</IfModule>
