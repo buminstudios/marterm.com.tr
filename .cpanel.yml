@@ -3,3 +3,4 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/martermc/public_html/
     - /bin/cp -a * $DEPLOYPATH
+    - /bin/cp -a .htaccess $DEPLOYPATH || true
