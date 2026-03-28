@@ -658,7 +658,7 @@ img { max-width: 100%; display: block; }
 
 .features__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: var(--s-gap);
 }
 
@@ -1786,6 +1786,9 @@ html[dir="rtl"] .news-card__link:hover svg {
     .app-areas-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    .features__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 768px) {
@@ -1794,6 +1797,9 @@ html[dir="rtl"] .news-card__link:hover svg {
         background: var(--c-bg) !important;
     }
 
+    .features__grid {
+        grid-template-columns: 1fr;
+    }
 
     /* --- Mobile Responsive Fix for Hero Section --- */
     .hero-scroll__sticky {
