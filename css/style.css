@@ -3259,10 +3259,10 @@ a.contact-card__value:hover {
 }
 
 .bed-showcase__inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: clamp(3rem, 6vw, 6rem);
+    display: flex;
+    justify-content: center;
     align-items: center;
+    gap: clamp(2rem, 4vw, 4rem);
 }
 
 .bed-showcase__desc {
@@ -3301,8 +3301,8 @@ a.contact-card__value:hover {
     border: 1px solid var(--c-border);
     background: var(--g-card);
     aspect-ratio: 4/3;
-    max-width: 520px;
-    margin-left: auto;
+    width: 520px;
+    flex-shrink: 0;
     cursor: pointer;
 }
 

@@ -237,3 +237,42 @@
 - `css/style.css` — Bed showcase stilleri
 - `assets/images/bed-1.webp`, `bed-2.webp` — Optimize görseller
 - `locales/*.json` — Yatak bölümü anahtarları
+
+---
+
+## 📅 [28 Mart 2026] - Oturum: Galeri Sayfası Kategori Filtreleme Sistemi
+
+### Galeri Filtre Butonları
+- ✅ **8 Kategori Butonu Eklendi:** Galeri grid'inin üstüne kategori bazlı filtreleme butonları eklendi:
+  - **Tümü** (67) — tüm görseller
+  - **Çatı Uygulamaları** (12) — görseller 1-12
+  - **Zemin Uygulamaları** (10) — görseller 13-22
+  - **Duvar Uygulamaları** (10) — görseller 23-32
+  - **Şap Altı** (8) — görseller 33-40
+  - **Akustik Çözümler** (9) — görseller 41-49
+  - **Prefabrik & Konteyner** (8) — görseller 50-57
+  - **Üretim & Detay** (10) — görseller 58-67
+- ✅ **Buton Tasarımı:** Pill şeklinde, glassmorphism efektli, aktif butonda altın gradient, her butonun yanında adet badge'i.
+- ✅ **`data-category` Attribute:** Her `gallery-item` div'ine kategori bilgisi eklendi (roof, floor, wall, screed, acoustic, prefab, production).
+- ✅ **Hover Kategori Etiketi:** Görsellere hover yapıldığında sol altta kategori adı etiketi görünür (fade-in + slide-up animasyonu).
+- ✅ **Smooth Filtreleme Animasyonu:** Buton tıklandığında eşleşmeyen görseller fade-out + scale-down ile gizlenir, eşleşenler fade-in + scale-up ile gösterilir.
+- ✅ **Lightbox HTML Eklendi:** Önceden sadece JS kodu olan ama HTML'i eksik olan lightbox modal yapısı (`gallery-lightbox`) eklendi. ESC tuşu ve overlay'e tıklama ile kapatma desteği mevcut.
+- ✅ **Responsive Tasarım:** Mobil ekranlarda butonlar küçültüldü, grid 2 sütuna düşürüldü.
+
+### Locale Güncellemeleri
+- ✅ **3 Yeni Kategori Anahtarı:** `cat_floor`, `cat_screed`, `cat_prefab` anahtarları 5 dil dosyasına eklendi:
+  - TR: Zemin Uygulamaları, Şap Altı, Prefabrik & Konteyner
+  - EN: Floor Applications, Under Screed, Prefab & Container
+  - ES: Aplicaciones de Suelo, Bajo Solera, Prefabricado y Contenedor
+  - RU: Напольные Приложения, Под Стяжкой, Сборные и Контейнерные
+  - AR: تطبيقات الأرضيات, تحت ذراع التسوية, الجاهزة والحاويات
+
+### Değişen Dosyalar
+- `src/pages/galeri.html` — Filtre butonları, kategori atamaları, lightbox HTML, güncellenen JS
+- `locales/tr.json`, `en.json`, `es.json`, `ru.json`, `ar.json` — Yeni kategori anahtarları
+- Build çıktıları: `pages/galeri.html`, `en/pages/galeri.html`, `es/pages/galeri.html`, `ru/pages/galeri.html`, `ar/pages/galeri.html`
+
+**Build Durumu:** ✅ Tüm 5 dil başarıyla derlendi.
+
+**Notlar:**
+- Görsellerin kategorilere dağılımı şimdilik sıralı yapıldı (1-12 çatı, 13-22 zemin vb.). Gerçek görseller incelendikçe `data-category` attribute'leri güncellenebilir.
