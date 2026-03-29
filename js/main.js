@@ -323,16 +323,24 @@ document.addEventListener('DOMContentLoaded', () => {
     // ============================
     // 8. PRELOADER FADE
     // ============================
-    document.body.style.opacity = '0';
-    document.body.style.transition = 'opacity 0.6s ease';
-
-    window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        // Remove old body opacity transition to avoid conflict
         document.body.style.opacity = '1';
-    });
 
-    // Fallback if load already fired
-    if (document.readyState === 'complete') {
-        document.body.style.opacity = '1';
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                preloader.classList.add('loaded');
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                }, 500); // Wait for transition
+            }, 600); // Show logo for at least a brief moment
+        });
+
+        if (document.readyState === 'complete') {
+            preloader.classList.add('loaded');
+            setTimeout(() => { preloader.style.display = 'none'; }, 500);
+        }
     }
 });
 
