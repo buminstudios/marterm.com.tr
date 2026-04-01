@@ -289,3 +289,14 @@
 - ✅ **`js/main.js` — Sıralı Yükleme (Sequential Lazy Load):** Hero kaydırma animasyonundaki 840 adet `.webp` karesinin aynı anda indirilip tarayıcı ağ trafiğini kilitlemesi (özellikle mobilde) sorunu giderildi. `preloadFrames` fonksiyonu yeniden yazılarak, sekansların sırayla (önnce 1. sekans, o bitince 2. vb.) arka planda yüklenmesi sağlandı. Bu sayede Sitenin İlk İçerik Boyutu (FCP) ciddi oranda hızlandırıldı.
 
 **GitHub Durumu:** ✅ Değişiklikler commit edilip pushlandı.
+
+---
+
+## 📅 [01 Nisan 2026] - Oturum 2: SPA Navigasyon ve Önbellek (Cache) Mimarisi 
+
+### Sayfa Hızı ve Geçiş (SPA) Optimizasyonları
+- ✅ **Giriş Ekranı (Preloader) İptali:** `style.css` üzerindeki `.preloader` sınıfına `display: none !important` tanımlanarak, sayfaya girildiğinde bekleten, alt sayfalarda devasa logo görünmesine veya gri ekran takılmasına sebep olan eski mekanizma kalıcı olarak devre dışı bırakıldı.
+- ✅ **Service Worker (`sw.js`) Entegrasyonu:** Kullanıcının dilediği "cache" altyapısı kuruldu. `sw.js` dosyası yaratıldı ve `js/main.js` içinde initialize edildi. Tüm statik dosyalar taranarak (assets, css, js) cihazda yerel olarak saklanarak sayfaların saniyenin altında (Offline-mod gibi) yüklenmesi sağlandı.
+- ✅ **Pürüzsüz Menü Geçişleri (Premium Fade-out Transition):** Tıklamalarda yaşanan tarayıcının meşhur tam sayfa "beyaz parlama" / "sürekli yeniden yükleme" hissi yok edildi. `main.js`'ye eklenen küçük JS bloğuyla tüm çıkış (navigasyon) linklerinde göze hoş gelen 0.25 saniyelik bir "fade-out" animasyonu sağlandı. Çok sayfalı sitemiz pürüzsüz bir SPA deneyimine (Single-page App) kavuştu.
+
+**GitHub Durumu:** ✅ Bütün değişiklikler tamamlanarak ana depoya aktarıldı (push edildi).
