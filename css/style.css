@@ -125,7 +125,7 @@ img { max-width: 100%; display: block; }
 .text-accent { color: var(--c-accent); }
 
 /* --- Preloader --- */
-.preloader {
+.preloader { display: none !important;
     position: fixed;
     top: 0;
     left: 0;

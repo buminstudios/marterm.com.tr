@@ -588,3 +588,54 @@ function closeCertModal() {
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeCertModal();
 });
+
+/* ========================================================================= */
+/* PREMIUM SPA-LIKE NAVIGATION & CACHING
+/* ========================================================================= */
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Service Worker for Instant Caching (Offline + Zero Load Times)
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js').then(reg => {
+                console.log('SW Cache active:', reg.scope);
+            }).catch(err => {
+                console.error('SW registration failed:', err);
+            });
+        });
+    }
+
+    // 2. Smooth Transitions between pages (Eliminates harsh reloads)
+    document.body.style.transition = 'opacity 0.25s ease-out';
+    document.body.style.opacity = '1';
+
+    // Intercept outbound clicks for smooth fade-out
+    document.body.addEventListener('click', (e) => {
+        const link = e.target.closest('a');
+        if (!link) return;
+
+        const href = link.getAttribute('href');
+        // Ignore dummy, hash, email, and external links
+        if (!href || href.startsWith('#') || href.startsWith('tel:') || href.startsWith('mailto:') || link.target === '_blank') return;
+        if (link.hostname !== window.location.hostname) return;
+        if (href.match(/\.(pdf|jpg|jpeg|png|webp|zip)$/i)) return; // Ignore direct file downloads
+
+        // If it's a link to identical page section, ignore
+        if (window.location.href.split('#')[0] === link.href.split('#')[0]) return;
+
+        // Apply smooth fade-out transition
+        e.preventDefault();
+        document.body.style.opacity = '0';
+        
+        setTimeout(() => {
+            window.location.href = link.href;
+        }, 200);
+    });
+});
+
+// 3. Handle Safari/Back Button cache
+window.addEventListener('pageshow', (e) => {
+    if (e.persisted) {
+        document.body.style.opacity = '1';
+    }
+});
+
