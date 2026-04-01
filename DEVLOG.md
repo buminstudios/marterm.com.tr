@@ -276,3 +276,16 @@
 
 **Notlar:**
 - Görsellerin kategorilere dağılımı şimdilik sıralı yapıldı (1-12 çatı, 13-22 zemin vb.). Gerçek görseller incelendikçe `data-category` attribute'leri güncellenebilir.
+
+---
+
+## 📅 [01 Nisan 2026] - Mobil Düzen ve Performans Optimizasyonları
+
+### Ürünler Sayfası Mobil Görünüm
+- ✅ **`style.css` — Grid Düzeltmeleri:** `.variants-grid` ve `.app-areas-grid` sınıflarına `max-width: 768px` medya sorgusu eklendi. Mobil cihazlarda içeriklerin sıkışmasını önlemek için sütun yapısı 2'den 1'e (`grid-template-columns: 1fr`) dönüştürüldü.
+
+### Açılış Ekranı (Preloader) ve Video Yükleme Performansı
+- ✅ **`js/main.js` — Preloader Zamanlaması:** Preloader'ın sadece "ilk video karesi yüklendiğinde" (`heroFirstFrameLoaded` event) ekrandan kaybolması sağlandı. Böylece sayfa yüklendiğinde görünen geçici "siyah ekran" sorunu tamamen çözüldü.
+- ✅ **`js/main.js` — Sıralı Yükleme (Sequential Lazy Load):** Hero kaydırma animasyonundaki 840 adet `.webp` karesinin aynı anda indirilip tarayıcı ağ trafiğini kilitlemesi (özellikle mobilde) sorunu giderildi. `preloadFrames` fonksiyonu yeniden yazılarak, sekansların sırayla (önnce 1. sekans, o bitince 2. vb.) arka planda yüklenmesi sağlandı. Bu sayede Sitenin İlk İçerik Boyutu (FCP) ciddi oranda hızlandırıldı.
+
+**GitHub Durumu:** ✅ Değişiklikler commit edilip pushlandı.

@@ -99,28 +99,66 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         preloadFrames() {
-            let index = 0;
-            this.sequences.forEach(seq => {
+            // Pre-allocate array for total frames
+            this.totalFrames = this.sequences.reduce((sum, seq) => sum + seq.frames, 0);
+            this.frames = new Array(this.totalFrames).fill(null);
+            
+            // Create a mapped array for easier sequential fetching
+            this.mappedFrames = [];
+            this.sequences.forEach((seq, sIndex) => {
                 for (let i = 1; i <= seq.frames; i++) {
-                    const img = new Image();
                     const frameNum = String(i).padStart(4, '0');
-                    img.src = `${seq.path}frame_${frameNum}.webp`;
-                    
-                    const currentIndex = index;
-                    img.onload = () => {
-                        this.framesLoaded++;
-                        if (currentIndex === 0 && this.ctx) {
-                            if (this.hasIntro) {
-                                this.startIntroAnimation();
-                            } else {
-                                this.drawFrame(0);
-                            }
-                        }
-                    };
-                    this.frames.push(img);
-                    index++;
+                    this.mappedFrames.push({
+                        src: `${seq.path}frame_${frameNum}.webp`,
+                        seqIndex: sIndex
+                    });
                 }
             });
+
+            // Load the first sequence immediately
+            this.loadSequence(0);
+        }
+
+        loadSequence(seqIndex) {
+            if (seqIndex >= this.sequences.length) return; // All loaded
+            
+            const seq = this.sequences[seqIndex];
+            const startIndex = this.mappedFrames.findIndex(f => f.seqIndex === seqIndex);
+            
+            let loadedCount = 0;
+            const targetCount = seq.frames;
+
+            for (let i = 0; i < targetCount; i++) {
+                const globalIndex = startIndex + i;
+                const data = this.mappedFrames[globalIndex];
+                
+                const img = new Image();
+                img.src = data.src;
+
+                const onReady = () => {
+                    this.framesLoaded++;
+                    
+                    if (globalIndex === 0 && this.ctx) {
+                        window.dispatchEvent(new Event('heroFirstFrameLoaded'));
+                        if (this.hasIntro) {
+                            this.startIntroAnimation();
+                        } else {
+                            this.drawFrame(0);
+                        }
+                    }
+
+                    loadedCount++;
+                    // Load next sequence when current is fully loaded
+                    if (loadedCount === targetCount) {
+                        this.loadSequence(seqIndex + 1);
+                    }
+                };
+
+                img.onload = onReady;
+                img.onerror = onReady; // Move on if 404
+                
+                this.frames[globalIndex] = img;
+            }
         }
 
         startIntroAnimation() {
@@ -325,21 +363,30 @@ document.addEventListener('DOMContentLoaded', () => {
     // ============================
     const preloader = document.getElementById('preloader');
     if (preloader) {
-        // Remove old body opacity transition to avoid conflict
         document.body.style.opacity = '1';
 
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                preloader.classList.add('loaded');
-                setTimeout(() => {
-                    preloader.style.display = 'none';
-                }, 500); // Wait for transition
-            }, 600); // Show logo for at least a brief moment
-        });
-
-        if (document.readyState === 'complete') {
+        const hidePreloader = () => {
+            if (preloader.classList.contains('loaded')) return;
             preloader.classList.add('loaded');
             setTimeout(() => { preloader.style.display = 'none'; }, 500);
+        };
+
+        const heroCanvas = document.getElementById('hero-canvas');
+        if (heroCanvas) {
+            // Homepage with canvas: wait for the first frame
+            window.addEventListener('heroFirstFrameLoaded', () => {
+                setTimeout(hidePreloader, 400); // slight delay to ensure smooth transition
+            });
+            // Fallback just in case
+            setTimeout(hidePreloader, 6000);
+        } else {
+            // Other pages: normal load
+            window.addEventListener('load', () => {
+                setTimeout(hidePreloader, 400);
+            });
+            if (document.readyState === 'complete') {
+                hidePreloader();
+            }
         }
     }
 });
